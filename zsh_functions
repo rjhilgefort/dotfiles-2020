@@ -1,0 +1,21 @@
+# dns
+flush-dns() {
+  sudo killall -HUP mDNSResponder
+  sudo killall mDNSResponderHelper
+  sudo dscacheutil -flushcache
+}
+
+# crontab
+# https://blog.chmd.fr/saving-your-crontab-in-your-dotfiles.html
+if test -z $CRONTABCMD; then
+  # allows to source zshrc twice
+  export CRONTABCMD=$(which crontab)
+  crontab() {
+    if [[ $@ == "-e" ]]; then
+        vim ~/.crontab && $CRONTABCMD ~/.crontab
+    else
+        $CRONTABCMD $@
+    fi
+  }
+  $CRONTABCMD ~/.crontab
+fi

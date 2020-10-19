@@ -1,0 +1,43 @@
+# reloads
+alias reload="exec $SHELL -l"
+alias reload-compton='killall -USR1 compton'
+
+# apt
+alias a="sudo apt"
+alias au="sudo apt update"
+alias as="sudo apt search"
+alias ai="sudo apt install"
+alias aiy="sudo apt install --assume-yes"
+alias ar="sudo apt remove"
+alias sa="sudo apt"
+alias sau="sudo apt update"
+alias sas="sudo apt search"
+alias sai="sudo apt install"
+alias saiy="sudo apt install --assume-yes"
+alias sar="sudo apt remove"
+
+# display manager
+# https://askubuntu.com/questions/829108/what-is-gdm3-kdm-lightdm-how-to-install-and-remove-them
+# lightdm, gdm, gdm3
+alias display-manager-list="cat /etc/X11/default-display-manager"
+alias display-manager-configure="sudo dpkg-reconfigure lightdm" # prompts UI, so doesn't matter which you pick here
+alias display-manager-restart='sudo systemctl restart lightdm'
+
+# tig
+alias t="tig status"
+
+### keyboard disablers
+alias kbd-disable="kbd-internal-disable"
+alias kbd-enable="kbd-internal-enable"
+
+# emacs
+alias emacs-term="emacs -nw"
+alias emacs-bg="emacs &"
+alias em="emacs-term"
+alias vime="emacs-term"
+
+# see what apps are currently using the network
+alias appsoninternet='sudo lsof -P -i -n | cut -f 1 -d " " | uniq'
+
+# list what ports are currently open
+alias listopenports='sudo lsof -i -P | grep -i "listen"'
