@@ -2,20 +2,6 @@
 alias reload="exec $SHELL -l"
 alias reload-compton='killall -USR1 compton'
 
-# apt
-alias a="sudo apt"
-alias au="sudo apt update"
-alias as="sudo apt search"
-alias ai="sudo apt install"
-alias aiy="sudo apt install --assume-yes"
-alias ar="sudo apt remove"
-alias sa="sudo apt"
-alias sau="sudo apt update"
-alias sas="sudo apt search"
-alias sai="sudo apt install"
-alias saiy="sudo apt install --assume-yes"
-alias sar="sudo apt remove"
-
 # display manager
 # https://askubuntu.com/questions/829108/what-is-gdm3-kdm-lightdm-how-to-install-and-remove-them
 # lightdm, gdm, gdm3
@@ -41,3 +27,6 @@ alias appsoninternet='sudo lsof -P -i -n | cut -f 1 -d " " | uniq'
 
 # list what ports are currently open
 alias listopenports='sudo lsof -i -P | grep -i "listen"'
+
+alias timezone-mountain="timedatectl set-timezone America/Denver"
+alias timezone-eastern="timedatectl set-timezone America/Kentucky/Louisville"

@@ -310,6 +310,10 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (add-to-list 'auto-mode-alist '("\\zsh_aliases\\'" . shell-script-mode))
+  (add-to-list 'auto-mode-alist '("\\zsh_env\\'" . shell-script-mode))
+  (add-to-list 'auto-mode-alist '("\\zsh_functions\\'" . shell-script-mode))
+  (add-to-list 'auto-mode-alist '("\\zshrc-arco\\'" . shell-script-mode))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
