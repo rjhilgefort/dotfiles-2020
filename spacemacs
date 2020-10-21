@@ -50,6 +50,12 @@ values."
      spell-checking
      syntax-checking
      version-control
+     javascript
+     typescript
+     docker
+     themes-megapack
+     nginx
+     react
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -314,6 +320,13 @@ you should place your code here."
   (add-to-list 'auto-mode-alist '("\\zsh_env\\'" . shell-script-mode))
   (add-to-list 'auto-mode-alist '("\\zsh_functions\\'" . shell-script-mode))
   (add-to-list 'auto-mode-alist '("\\zshrc-arco\\'" . shell-script-mode))
+
+  ;; Better window splitting
+  (evil-leader/set-key
+    "wh" 'split-window-right
+    "wj" 'split-window-below-and-focus
+    "wk" 'split-window-below
+    "wl" 'split-window-right-and-focus)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
