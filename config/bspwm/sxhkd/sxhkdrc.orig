@@ -1,78 +1,80 @@
-#############################################################
+#################################################################
+# KEYBOARD BINDINGS FOR ANY TWM
+#################################################################
+
+#################################################################
+# SUPER + FUNCTION KEYS
+#################################################################
+
+# Rofi Fullscreen
+super + F11
+    rofi -show run -fullscreen
+
+# Rofi
+super + F12
+    rofi -show run
+
+#################################################################
 # SUPER + ... KEYS
-#############################################################
+#################################################################
 
-# Focus Selected Desktop
-super + {q,w,e,r,t,y,u,i,o}
-  bspc desktop -f '^{1-9}'
+#Browser
+super + w
+    firefox
 
-# Move window to selected desktop
-super + shift + {q,w,e,r,t,y,u,i,o}
-  id=$(bspc query -N -n); bspc node -d ^{1-9}; bspc node -f ${id}}
+#Conky-toggle
+super + c
+    conky-toggle
+
+# Htop
+# super + h
+#    urxvt 'htop task manager' -e htop
 
 #arcolinux-logout
 super + x
-  arcolinux-logout
+    arcolinux-logout
+
+#Rofi theme selector
+super + r
+    rofi-theme-selector
+
+#Urxvt
+super + t
+    urxvt
+
+#Pavucontrol
+super + v
+    pavucontrol
+
+#Pragha
+super + m
+    pragha
 
 #Termite
 super + Return
-  termite
+    termite
+
+#Xkill
+super + Escape
+    xkill
+
+#Keyboard dependent
+#termite
 super + KP_Enter
-  termite
-
-#Toggle fullscreen of window
-super + f
-  bspc node --state \~fullscreen
-
-# Kill
-super + shift + q
-  bspc node -c
-
-# Focus next desktop
-super + n
-  bspc desktop -f '^{1-9}'
-
-# Focus next desktop
-super + p
-  bspc desktop -f '^{9,8,7,6,5,4,3,2,1}'
-
-# Smart resize, will grow or shrink depending on location.
-# Will always grow for floating nodes.
-super + shift + alt + {h,j,k,l}
-  n=20; \
-  { d1=left;   d2=right;  dx=-$n; dy=0;   \
-    , d1=bottom; d2=top;    dx=0;   dy=$n;  \
-    , d1=top;    d2=bottom; dx=0;   dy=-$n; \
-    , d1=right;  d2=left;   dx=$n;  dy=0;   \
-  } \
-  bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
-
-# Increase/decrease window gap on focused desktop
-#super + bracket{left,right}
-#  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
-
-# Set the window state
-super + shift + space
-  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
-# Rotate desktop
-super + z
-  bspc node @/ --rotate 90
-	# bspc node @/ --rotate {90,-90}
+	termite
 
 #################################################################
 # SUPER + SHIFT KEYS
 #################################################################
 
-# move focused window to the next workspace and then switch to that workspace
-super + shift + {n,p}
-  id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}; bspc desktop --focus {prev,next}; bspc node --focus ${id}
-
 #File-Manager
 super + shift + Return
 	thunar
-super + shift + KP_Enter
-	thunar
+
+#Keyboard dependent
+#File-Manager
+#super + shift + KP_Enter
+#	thunar
 
 #dmenu
 super + shift + d
@@ -87,13 +89,17 @@ super + shift + s
 #	thunar
 
 
-#############################################################
+#################################################################
 # CONTROL + ALT KEYS
-#############################################################
+#################################################################
+
+#arcolinux-welcome-app
+ctrl + alt + w
+     arcolinux-welcome-app
 
 #arcolinux-tweak-tool
 ctrl + alt + e
-  arcolinux-tweak-tool
+    arcolinux-tweak-tool
 
 #conky-rotate
 ctrl + alt + Next
@@ -172,6 +178,12 @@ ctrl + alt + a
     xfce4-appfinder
 
 
+#Keyboard dependent
+#termite
+#ctrl + alt + KP_Enter
+#     termite
+
+
 #################################################################
 # ALT + ... KEYS
 #################################################################
@@ -221,6 +233,10 @@ alt + F3
 #VARIETY KEYS WITH PYWAL
 #################################################################
 
+#Wallpaper trash
+alt + shift + t
+    variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
 #Wallpaper next
 alt + shift + n
     variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
@@ -238,6 +254,15 @@ alt + shift + u
     wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #################################################################
+# CONTROL + SHIFT KEYS
+#################################################################
+
+#Xcfe4-TaskManager
+ctrl + shift + Escape
+    xfce4-taskmanager
+
+
+#################################################################
 #     SCREENSHOTS
 #################################################################
 
@@ -253,9 +278,19 @@ ctrl + Print
 ctrl + shift + Print
      gnome-screenshot -i
 
-#############################################################
+
+#################################################################
+#     FUNCTION KEYS
+#################################################################
+
+#xfce4-terminal dropdown
+F12
+    xfce4-terminal --drop-down
+
+
+#################################################################
 #     MULTIMEDIA KEYS
-#############################################################
+#################################################################
 
 #Raises volume
 XF86AudioRaiseVolume
@@ -325,6 +360,42 @@ ctrl + alt + o
     ~/.config/bspwm/scripts/picom-toggle.sh
 
 #################################################################
+# SUPER + KEYS
+#################################################################
+
+#Toggle fullscreen of window
+super + f
+	bspc node --state \~fullscreen
+
+# Toggle pseudo tiling of window
+super + p
+	bspc node --state \~pseudo_tiled
+
+#kill
+super + q
+	bspc node -c
+
+#################################################################
+# SUPER KEYS
+#################################################################
+
+#Focus selected desktop
+super + Tab
+	bspc desktop -f '^{1-9,10}'
+
+# Increase/decrease window gap on focused desktop
+super + bracket{left,right}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
+
+# set the window state
+super + space
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Move focus to other monitor
+super + BackSpace
+		bspc monitor -f next
+
+#################################################################
 # SUPER + ALT KEYS
 #################################################################
 
@@ -365,6 +436,21 @@ super + {_,shift + }{h,j,k,l}
 super + {_,shift + }a
 	bspc node @/ --flip {vertical,horizontal}
 
+# Move focused window to other monitor
+super + shift + Left
+	bspc node -m next --follow
+
+# Move focused window to other monitor
+super + shift + Right
+	bspc node -m next --follow
+
+# Move focused window to other monitor
+super + shift + Up
+	bspc node -m next --follow
+
+# Move focused window to other monitor
+super + shift + Down
+	bspc node -m next --follow
 
 #################################################################
 # SUPER + CONTROL KEYS
@@ -390,3 +476,67 @@ super + ctrl + {u,i,o,p}
 super + ctrl + {_,shift +}{1-9}
 	bspc node {_,@/} --presel-ratio 0.{1-9}
 
+
+#################################################################
+# ALT KEYS
+#################################################################
+
+# Focus selected desktop
+alt + Tab
+	bspc desktop -f '^{1-9,10}'
+
+# Focus selected desktop
+alt + shift + Tab
+	bspc desktop -f '^{1-9,10}'
+
+# Rotate desktop
+alt + space
+	bspc node @/ --rotate {90,-90}
+
+#################################################################
+# ALT + SHIFT KEYS
+#################################################################
+
+# Expand tiled space
+alt + shift + {h,j,k,l}
+	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+
+#################################################################
+# CTRL + ALT KEYS
+#################################################################
+
+# Focus next/previous window
+ctrl + alt + Left
+	bspc node --focus west
+
+# Focus next/previous window
+ctrl + alt + Right
+	bspc node --focus east
+
+# Focus Up window
+ctrl +alt + Up
+	bspc node --focus north
+
+# Focus Down window
+ctrl + alt + Down
+	bspc node --focus south
+
+#################################################################
+#################################################################
+##################   AZERTY/QWERTY/ ... KEYBOARD#################
+#################################################################
+#################################################################
+
+#Switch here between qwerty and azerty or make new one
+#Focus selected desktop FOR QWERTY KEYBOARDS
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
+
+#################################################################
+
+#Switch here between qwerty and azerty or make new one
+#Move window to selected desktop FOR QWERTY KEYBOARDS
+super + shift + {1-9,0}
+    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
+
+#################################################################

@@ -432,7 +432,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = kernel
-modules-right = pavolume memory2 cpu2 date
+modules-right = date pavolume memory2 cpu2 battery
 
 tray-detached = false
 tray-offset-x = 0
