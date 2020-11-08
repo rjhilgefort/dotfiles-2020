@@ -44,6 +44,11 @@ super + shift + alt + {h,j,k,l}
 #super + bracket{left,right}
 #  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
+# Toggle gaps
+super + a
+  GAP={0,15}; \
+  bspc config window_gap $GAP;
+
 # Set the window state
 super + shift + space
   bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
@@ -67,13 +72,9 @@ super + Return
 super + KP_Enter
   termite
 
-# Reload bspwm
-super + shift + r
-  ~/.config/bspwm/bspwmrc
-
-# Reload sxhkd
+# Reload bspwm and sxhkd
 super + shift + s
-	pkill -USR1 -x sxhkd
+	~/.config/bspwm/bspwmrc; pkill -USR1 -x sxhkd;
 
 # Kill window
 super + c

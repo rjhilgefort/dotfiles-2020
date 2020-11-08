@@ -46,7 +46,7 @@ run volumeicon &
 #run vivaldi-stable &
 run termite &
 run firefox &
-run emacs &
+# run emacs &
 #run thunar &
 #run dropbox &
 #run insync start &
