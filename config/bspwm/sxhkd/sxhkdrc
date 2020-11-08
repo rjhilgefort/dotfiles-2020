@@ -10,36 +10,29 @@ super + {q,w,e,r,t,y,u,i,o}
 super + shift + {q,w,e,r,t,y,u,i,o}
   id=$(bspc query -N -n); bspc node -d ^{1-9}; bspc node -f ${id}}
 
-#arcolinux-logout
-super + x
-  arcolinux-logout
-
-#Termite
-super + Return
-  termite
-super + KP_Enter
-  termite
-
-#Toggle fullscreen of window
+# Toggle fullscreen of window
 super + f
   bspc node --state \~fullscreen
 
-# Kill
-super + shift + q
-  bspc node -c
-
 # Focus next desktop
-super + n
-  bspc desktop -f '^{1-9}'
+super + {n,p}
+  bspc desktop -f {next,prev}
 
-# Focus next desktop
-super + p
-  bspc desktop -f '^{9,8,7,6,5,4,3,2,1}'
+# Focus/swap windows by direction
+super + {_,shift + }{h,j,k,l}
+  bspc node --{focus,swap} {west,south,north,east}
 
-# Smart resize, will grow or shrink depending on location.
-# Will always grow for floating nodes.
+# Move focused window to the next workspace and then switch to that workspace
+super + shift + {n,p}
+  DIR={next,prev}; \
+  NODE_ID=$(bspc query --nodes --node); \
+  bspc node --to-desktop $DIR; \
+  bspc desktop --focus $DIR; \
+  bspc node --focus $NODE_ID
+
+# Smart resize, will grow or shrink depending on location. # Will always grow for floating nodes.
 super + shift + alt + {h,j,k,l}
-  n=20; \
+  n=25; \
   { d1=left;   d2=right;  dx=-$n; dy=0;   \
     , d1=bottom; d2=top;    dx=0;   dy=$n;  \
     , d1=top;    d2=bottom; dx=0;   dy=-$n; \
@@ -55,18 +48,44 @@ super + shift + alt + {h,j,k,l}
 super + shift + space
   bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
+# Flip desktop
+super + x
+  bspc node @/ --flip vertical
+
 # Rotate desktop
 super + z
   bspc node @/ --rotate 90
 	# bspc node @/ --rotate {90,-90}
 
 #################################################################
-# SUPER + SHIFT KEYS
+# Apps / Commands
 #################################################################
 
-# move focused window to the next workspace and then switch to that workspace
-super + shift + {n,p}
-  id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}; bspc desktop --focus {prev,next}; bspc node --focus ${id}
+# Termite
+super + Return
+  termite
+super + KP_Enter
+  termite
+
+# Reload bspwm
+super + shift + r
+  ~/.config/bspwm/bspwmrc
+
+# Reload sxhkd
+super + shift + s
+	pkill -USR1 -x sxhkd
+
+# Kill window
+super + c
+  bspc node -c
+
+# arcolinux-logout
+super + shift + c
+  arcolinux-logout
+
+# Logout
+super + shift + alt + c
+  bspc quit
 
 #File-Manager
 super + shift + Return
@@ -74,28 +93,22 @@ super + shift + Return
 super + shift + KP_Enter
 	thunar
 
-#dmenu
+# dmenu
 super + shift + d
 	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
-
-#reload sxhkd:
-super + shift + s
-	pkill -USR1 -x sxhkd
-
-#Keyboard dependent
-#super + shift + KP_Enter
-#	thunar
+super + space
+	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=18'
 
 
 #############################################################
 # CONTROL + ALT KEYS
 #############################################################
 
-#arcolinux-tweak-tool
+# arcolinux-tweak-tool
 ctrl + alt + e
   arcolinux-tweak-tool
 
-#conky-rotate
+# conky-rotate
 ctrl + alt + Next
      conky-rotate -n
 
@@ -216,7 +229,6 @@ alt + F2
 alt + F3
     xfce4-appfinder
 
-
 #################################################################
 #VARIETY KEYS WITH PYWAL
 #################################################################
@@ -243,7 +255,7 @@ alt + shift + u
 
 #Scrot
 Print
-    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+  scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
 
 #screeenshooter
 ctrl + Print
@@ -339,44 +351,6 @@ super + alt + {_,shift + }{Left,Down,Up,Right}
 # Cancel preselection
 super + ctrl + space
 	bspc node --presel-dir cancel
-
-#################################################################
-# SUPER + SHIFT KEYS
-#################################################################
-
-
-#Reload bspwm
-super + shift + r
-	~/.config/bspwm/bspwmrc
-
-#kill
-super + shift + q
-	bspc node -c
-
-#Logout
-super + shift + x
-	bspc quit
-
-# Focus/swap windows by direction
-super + {_,shift + }{h,j,k,l}
-	bspc node --{focus,swap} {west,south,north,east}
-
-# Flip layout vertically/horizontally
-super + {_,shift + }a
-	bspc node @/ --flip {vertical,horizontal}
-
-
-#################################################################
-# SUPER + CONTROL KEYS
-#################################################################
-
-# Focus/swap windows by direction
-super + ctrl + {Left,Down,Up,Right}
-	bspc node --{focus} {west,south,north,east}
-
-# Contract tiled space
-super + ctrl + {h,j,k,l}
-	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
 
 # Focus parent/brother/first/second for preselection
 super + ctrl + {e,r,t,y}
