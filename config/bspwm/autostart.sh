@@ -30,6 +30,7 @@ dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
+### Background Apps
 # conky -c $HOME/.config/bspwm/system-overview &
 run variety &
 run nm-applet &
@@ -41,15 +42,23 @@ picom --config $HOME/.config/bspwm/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 run volumeicon &
-#nitrogen --restore &
-#run caffeine &
-#run vivaldi-stable &
+run synology-drive &
+run copyq &
+run flameshot &
+
+### Foreground Apps
 run termite &
+run code &
 run firefox &
-# run emacs &
+run discord &
+run slack &
+# run caprine &
+run android-messages-desktop &
+run spotify &
+run todoist &
+run TogglDesktop &
+
+#nitrogen --restore &
+#run emacs &
 #run thunar &
-#run dropbox &
-#run insync start &
-#run discord &
-#run spotify &
-#run atom &
+#run caffeine &

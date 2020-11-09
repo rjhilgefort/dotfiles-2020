@@ -2,6 +2,9 @@
 # SUPER + ... KEYS
 #############################################################
 
+super + s
+	bspc desktop -l next
+
 # Focus Selected Desktop
 super + {q,w,e,r,t,y,u,i,o}
   bspc desktop -f '^{1-9}'
@@ -18,10 +21,6 @@ super + f
 super + {n,p}
   bspc desktop -f {next,prev}
 
-# Focus/swap windows by direction
-super + {_,shift + }{h,j,k,l}
-  bspc node --{focus,swap} {west,south,north,east}
-
 # Move focused window to the next workspace and then switch to that workspace
 super + shift + {n,p}
   DIR={next,prev}; \
@@ -29,6 +28,12 @@ super + shift + {n,p}
   bspc node --to-desktop $DIR; \
   bspc desktop --focus $DIR; \
   bspc node --focus $NODE_ID
+
+# Focus/swap windows by direction
+super + {_,shift + }{h,j,k,l}
+  LAYOUT=$(bspc query -T -d | jq -r .layout); \
+  [[ "$LAYOUT" == "tiled" ]] && bspc node --{focus,swap} {west,south,north,east}.local; \
+  [[ "$LAYOUT" == "monocle" ]] && bspc node --{focus,swap} {prev,next,prev,next}.local
 
 # Smart resize, will grow or shrink depending on location. # Will always grow for floating nodes.
 super + shift + alt + {h,j,k,l}
@@ -40,14 +45,15 @@ super + shift + alt + {h,j,k,l}
   } \
   bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
 
-# Increase/decrease window gap on focused desktop
-#super + bracket{left,right}
-#  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
-
 # Toggle gaps
 super + a
   GAP={0,15}; \
   bspc config window_gap $GAP;
+
+# Increase/decrease window gap on focused desktop
+# super + bracket{left,right}
+super + shift + alt + {comma,i}
+  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
 # Set the window state
 super + shift + space
@@ -74,6 +80,10 @@ super + KP_Enter
 
 # Reload bspwm and sxhkd
 super + shift + s
+	pkill -USR1 -x sxhkd; # todo: notify
+
+# Reload bspwm and sxhkd
+super + shift + alt + s
 	~/.config/bspwm/bspwmrc; pkill -USR1 -x sxhkd;
 
 # Kill window
@@ -100,6 +110,14 @@ super + shift + d
 super + space
 	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=18'
 
+super + v
+  copyq toggle
+
+super + b
+  flameshot gui -p ~/Desktop
+
+super + shift + b
+  flameshot full -p ~/Desktop
 
 #############################################################
 # CONTROL + ALT KEYS
@@ -364,4 +382,3 @@ super + ctrl + {u,i,o,p}
 # Define splitting ratio for next window on leaf/parent
 super + ctrl + {_,shift +}{1-9}
 	bspc node {_,@/} --presel-ratio 0.{1-9}
-
