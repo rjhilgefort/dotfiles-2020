@@ -52,7 +52,7 @@ bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 #bspc monitor HDMI1 -d 1 2 3 4 5
 #bspc monitor HDMI2 -d 6 7 8 9 10
 
-#Fullscreen applications
+# Fullscreen applications
 bspc rule -a inkscape state=fullscreen
 bspc rule -a Spotify state=fullscreen
 bspc rule -a Vlc state=fullscreen
@@ -60,7 +60,7 @@ bspc rule -a VirtualBox Manager state=fullscreen
 bspc rule -a VirtualBox Machine state=fullscreen
 bspc rule -a Gimp state=fullscreen
 
-#Floating applications
+# Floating applications
 bspc rule -a Arandr state=floating
 bspc rule -a Arcolinux-tweak-tool.py state=floating
 bspc rule -a Arcolinux-welcome-app.py state=floating
@@ -80,7 +80,7 @@ bspc rule -a Oblogout state=floating
 bspc rule -a copyq state=floating
 bspc rule -a Ristretto state=floating
 
-#Tiled applications
+# Tiled applications
 bspc rule -a Gnome-disks state=tiled
 bspc rule -a Xfce4-settings-manager state=tiled
 
@@ -96,6 +96,7 @@ bspc rule -a android-messages-desktop desktop='^3' follwo=on
 bspc rule -a caprine desktop='^3' follwo=on
 bspc rule -a Todoist desktop='^4' follwo=on
 bspc rule -a Toggle Desktop desktop='^4' follwo=on
+bspc rule -a Notion desktop='^4' follwo=on
 bspc rule -a cloud-drive-ui desktop='^4' follwo=on
 bspc rule -a Spotify desktop='^5' follwo=on
 bspc rule -a steam desktop='^6' follwo=on
