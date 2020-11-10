@@ -195,10 +195,6 @@ ctrl + alt + Return
 ctrl + alt + t
     termite
 
-#Vivaldi
-ctrl + alt + v
-    vivaldi-stable
-
 #Xfce4-appfinder
 ctrl + alt + a
     xfce4-appfinder

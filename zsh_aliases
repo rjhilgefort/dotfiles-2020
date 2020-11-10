@@ -30,3 +30,5 @@ alias listopenports='sudo lsof -i -P | grep -i "listen"'
 
 alias timezone-mountain="timedatectl set-timezone America/Denver"
 alias timezone-eastern="timedatectl set-timezone America/Kentucky/Louisville"
+
+alias y="yarn"
