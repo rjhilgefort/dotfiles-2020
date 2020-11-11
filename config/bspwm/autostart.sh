@@ -52,11 +52,12 @@ run code &
 run firefox &
 run discord &
 run slack &
-# run caprine &
+run caprine &
 run android-messages-desktop &
-run spotify &
 run todoist &
 run TogglDesktop &
+run 1password &
+run spotify &
 run notion-app &
 
 #nitrogen --restore &

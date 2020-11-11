@@ -101,24 +101,24 @@ function mappings() {
 
   // SCROLLING
   ////////////////////////////////////////////////////////
-  mapp("<Ctrl-y>", "#2 pageUp", () => Normal.scroll("pageUp"), {
-    repeatIgnore: true,
-  });
-  mapp("<Ctrl-e>", "#2 pageDown", () => Normal.scroll("pageDown"), {
-    repeatIgnore: true,
-  });
+  // mapp("<Ctrl-y>", "#2 pageUp", () => Normal.scroll("pageUp"), {
+  //   repeatIgnore: true,
+  // });
+  // mapp("<Ctrl-e>", "#2 pageDown", () => Normal.scroll("pageDown"), {
+  //   repeatIgnore: true,
+  // });
   mapp("<Ctrl-u>", "#2 pageUp", () => Normal.scroll("pageUp"), {
     repeatIgnore: true,
   });
   mapp("<Ctrl-d>", "#2 pageDown", () => Normal.scroll("pageDown"), {
     repeatIgnore: true,
   });
-  mapp("<Ctrl-b>", "#2 pageUp", () => Normal.scroll("pageUp"), {
-    repeatIgnore: true,
-  });
-  mapp("<Ctrl-f>", "#2 pageDown", () => Normal.scroll("pageDown"), {
-    repeatIgnore: true,
-  });
+  // mapp("<Ctrl-b>", "#2 pageUp", () => Normal.scroll("pageUp"), {
+  //   repeatIgnore: true,
+  // });
+  // mapp("<Ctrl-f>", "#2 pageDown", () => Normal.scroll("pageDown"), {
+  //   repeatIgnore: true,
+  // });
 
   // HISTORY
   ////////////////////////////////////////////////////////
