@@ -115,7 +115,7 @@ super + shift + KP_Enter
 
 # dmenu
 super + space
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=18'
+  ~/.scripts/dmenu-rjh
 
 super + v
   copyq toggle
@@ -125,6 +125,12 @@ super + b
 
 super + shift + b
   flameshot full -p ~/Desktop
+
+super + g
+  ~/.scripts/dmenu-search
+
+super + shift + g
+  ~/.scripts/dmenu-search-images
 
 #############################################################
 # CONTROL + ALT KEYS
