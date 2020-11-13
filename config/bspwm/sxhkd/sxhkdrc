@@ -8,8 +8,13 @@ super + s
 super + d
   bsp-layout set tiled
 
+# Tiled layouts
+# TODO: There's "even" but it doesn't work, hence the script
 super + shift + d
-  bsp-layout set {tall,rtall,wide,rwide,even,tiled}
+  {bsp-layout set tall,bsp-layout set rtall,bsp-layout set wide,bsp-layout set rwide,~/.scripts/bspwm-grid-layout,bsp-layout set tiled
+
+super + shift + alt + d
+  ~/.scripts/bspwm-grid-layout
 
 # Focus Selected Desktop
 super + {q,w,e,r,t,y,u,i,o}

@@ -41,7 +41,7 @@ bspc config presel_feedback_color	"#5e81ac"
 #bspc config urgent_border_color 	"#dd2727"
 
 #Single monitor
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor -d 1 2 3 4 5 6 7 8 9
 
 #Dual monitor
 #find out names with arandr or xrandr
@@ -80,6 +80,7 @@ bspc rule -a Oblogout state=floating
 #bspc rule -a Xfce4-appfinder state=floating sticky=on
 bspc rule -a copyq state=floating
 bspc rule -a Ristretto state=floating
+bspc rule -a Blueberry.py state=floating
 
 # Tiled applications
 bspc rule -a Gnome-disks state=tiled
@@ -94,11 +95,12 @@ bspc rule -a chromium desktop='^2'  follow=on
 bspc rule -a Slack desktop='^3' follwo=on
 bspc rule -a discord desktop='^3' follwo=on
 bspc rule -a android-messages-desktop desktop='^3' follwo=on
-bspc rule -a caprine desktop='^3' follwo=on
-bspc rule -a Todoist desktop='^4' follwo=on
-bspc rule -a Toggle Desktop desktop='^4' follwo=on
+bspc rule -a Caprine desktop='^3' follwo=on
+# bspc rule -a Todoist desktop='^4' follwo=on # TODO: this is the elctron version
+bspc rule -a todoist-nativefier-409272 desktop='^4' follwo=on
+bspc rule -a Toggl Desktop desktop='^4' follwo=on
 bspc rule -a 1Password desktop='^4' follwo=on
-bspc rule -a Notion desktop='^5' follwo=on
+bspc rule -a Notion desktop='^4' follwo=on
 bspc rule -a Spotify desktop='^5' follwo=on
 bspc rule -a cloud-drive-ui desktop='^6' follwo=on
 bspc rule -a steam desktop='^6' follwo=on

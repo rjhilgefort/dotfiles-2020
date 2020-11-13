@@ -431,8 +431,8 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
-modules-center = kernel
-modules-right = date pavolume memory2 cpu2 battery
+modules-center = date weather memory2 cpu2 pavolume battery
+modules-right = spotify1
 
 tray-detached = false
 tray-offset-x = 0
@@ -1054,7 +1054,7 @@ ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-8 = 9;
-ws-icon-9 = 10;
+;ws-icon-9 = 10;
 ws-icon-default = " "
 
 
@@ -1317,8 +1317,9 @@ type = internal/date
 interval = 5
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %Y-%m-%d%"
-date-alt = " %d-%m-%Y"
+date = " %A, %B %d, %Y"
+date-alt = " %Y-%m-%d%"
+; date-alt = " %d-%m-%Y"
 time = %H:%M
 time-alt = %H:%M
 format-prefix = " "
@@ -1326,7 +1327,7 @@ format-prefix-foreground = #c1941a
 format-underline = #c1941a
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-label = %date% %time%
+label = %date% | %time%
 
 #################################################################
 
@@ -1659,8 +1660,8 @@ label = %output%
 exec = ~/.config/polybar/scripts/pavolume.sh --listen
 click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
-scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
+scroll-up = ~/.config/polybar/scripts/pavolume.sh --down
+scroll-down = ~/.config/polybar/scripts/pavolume.sh --up
 format-underline = #3EC13F
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}

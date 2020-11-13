@@ -15,11 +15,11 @@
 
 import requests
 
-CITY = "2803138"
-API_KEY = "756edce7e9d4c385ef9499a53492678c"
-UNITS = "Metric"
-UNIT_KEY = "C"
-#UNIT_KEY = "F"
+CITY = "5425043"
+API_KEY = "9d3d818ed5e8fd204811f44e6663eb7b"
+# API_KEY = "756edce7e9d4c385ef9499a53492678c" # NOTE: ArcoKey
+UNITS = "Imperial"
+UNIT_KEY = "F"
 LANG = "en"
 #LANG = "nl"
 #LANG = "hu"

@@ -45,6 +45,7 @@ run volumeicon &
 # run synology-drive &
 run copyq &
 run flameshot &
+run rescuetime &
 
 ### Foreground Apps
 run termite &
@@ -54,7 +55,7 @@ run discord &
 run slack &
 run caprine &
 run android-messages-desktop &
-run todoist &
+run todoist-nativefier &
 run TogglDesktop &
 run 1password &
 run spotify &

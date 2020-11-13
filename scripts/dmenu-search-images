@@ -3,7 +3,7 @@
 # https://zenbro.github.io/2015/05/24/searching-the-web-with-speed-of-thought-using-dmenu.html
 
 URL='https://www.google.com/search?tbm=isch&tbs=isz:m&q='
-QUERY=$(echo '' | dmenu -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=18' -p "Search:")
+QUERY=$(echo '' | dmenu -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=18' -p "Google Image:")
 if [ -n "$QUERY" ]; then
   xdg-open "${URL}${QUERY}" 2> /dev/null
   xdo activate -n Navigator # Focus Firefox
