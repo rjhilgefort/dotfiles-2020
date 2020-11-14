@@ -431,8 +431,8 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
-modules-center = date weather memory2 cpu2 pavolume battery
-modules-right = spotify1
+modules-center = spotify1 date weather memory2 cpu2 pavolume battery
+modules-right = 
 
 tray-detached = false
 tray-offset-x = 0

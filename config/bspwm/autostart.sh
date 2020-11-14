@@ -46,6 +46,7 @@ run volumeicon &
 run copyq &
 run flameshot &
 run rescuetime &
+run logid &
 
 ### Foreground Apps
 run termite &
