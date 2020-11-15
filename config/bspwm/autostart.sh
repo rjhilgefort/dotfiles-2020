@@ -17,18 +17,16 @@ function run {
 $HOME/.config/polybar/launch.sh &
 
 # Keyboard settings
+# TODO: This seems to get dropped after suspend
 xset r rate 150 50
 #setxkbmap -layout be
-
-#Some ways to set your wallpaper besides variety or nitrogen
-#feh --bg-scale ~/.config/bspwm/wall.png &
-feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-#feh --randomize --bg-fill ~/Képek/*
-#feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*
 
 dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
+
+# Setup wallpaper
+run ~/.scripts/feh-randomizer ~/Store/Images/Wallpaper-Active/ 1m
 
 ### Background Apps
 # conky -c $HOME/.config/bspwm/system-overview &

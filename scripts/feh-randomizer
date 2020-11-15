@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+################################
+# USAGE:
+# ./feh-randomizer <path> <sleep arg>
+# ./feh-randomizer ~/Store/Images/Wallpaper-Active/ 5m 
+
+while true; do
+  feh --randomize --bg-fill $1/*
+  sleep $2
+done

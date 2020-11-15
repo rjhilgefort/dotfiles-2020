@@ -68,8 +68,8 @@ super + shift + space
   bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Flip desktop
-super + x
-  bspc node @/ --flip vertical
+super + {_,shift + }x
+  bspc node @/ --flip {vertical,horizontal}
 
 # Rotate desktop
 super + z
