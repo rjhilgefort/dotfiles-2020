@@ -17,7 +17,7 @@ function run {
 $HOME/.config/polybar/launch.sh &
 
 # Keyboard settings
-# TODO: This seems to get dropped after suspend
+# TODO: This seems to get dropped after suspend or lid closed
 xset r rate 150 50
 #setxkbmap -layout be
 
@@ -26,6 +26,7 @@ xsetroot -cursor_name left_ptr &
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
 # Setup wallpaper
+# TODO: Explore variety, nitrogen, etc.
 run ~/.scripts/feh-randomizer ~/Store/Images/Wallpaper-Active/ 1m
 
 ### Background Apps

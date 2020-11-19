@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+feh --randomize --bg-fill ~/Store/Images/Wallpaper-Active/*

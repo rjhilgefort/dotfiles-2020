@@ -32,3 +32,6 @@ alias timezone-mountain="timedatectl set-timezone America/Denver"
 alias timezone-eastern="timedatectl set-timezone America/Kentucky/Louisville"
 
 alias y="yarn"
+
+alias network-restart="sudo systemctl restart NetworkManager"
+alias keyboard-key-repeat="xset r rate 150 50"
