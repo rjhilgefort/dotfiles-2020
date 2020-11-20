@@ -29,6 +29,9 @@ run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 # TODO: Explore variety, nitrogen, etc.
 run ~/.scripts/feh-randomizer ~/Store/Images/Wallpaper-Active/ 1m
 
+# Setup lockscreen image
+run ~/.scripts/betterlockscreen-randomizer ~/Store/Images/Wallpaper-Active/ 10m 
+
 ### Background Apps
 # conky -c $HOME/.config/bspwm/system-overview &
 run variety &

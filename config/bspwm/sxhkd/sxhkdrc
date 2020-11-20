@@ -104,7 +104,7 @@ super + c
 
 # arcolinux-logout
 super + shift + c
-  arcolinux-logout
+  betterlockscreen -l # dim, blur, dimblur
 
 # Logout
 super + shift + alt + c

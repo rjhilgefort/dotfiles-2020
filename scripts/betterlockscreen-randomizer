@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+# Docs
+# https://github.com/pavanjadhaw/betterlockscreen
+
+################################
+# USAGE:
+# ./betterlockscreen-randomizer <path> <sleep arg>
+# ./betterlockscreen-randomizer ~/Store/Images/Wallpaper-Active/ 5m
+
+while true; do
+  betterlockscreen -u $1
+  echo "\nSleeping for $2...\n"
+  sleep $2
+done
