@@ -1,0 +1,5 @@
+configuration {
+   // theme: "/home/rjhilgefort/.config/rofi/rofi-themes/User\ Themes/slate.rasi";
+   theme: "/home/rjhilgefort/.config/rofi/rofi-themes/Official\ Themes/Pop-Dark.rasi";
+   combi-hide-mode-prefix: true;
+}

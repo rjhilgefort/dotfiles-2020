@@ -3,12 +3,14 @@
 #############################################################
 
 super + s
-  bsp-layout set monocle
+  bspc desktop --layout monocle
+  # bsp-layout set monocle
 
 # Tiled layouts
 # TODO: There's "even" but it doesn't work, hence the script
 super + d
-  bsp-layout set tiled; {bsp-layout set tiled, ~/.scripts/bspwm-grid-layout, bsp-layout set tall, bsp-layout set rtall, bsp-layout set wide, bsp-layout set rwide}
+  bspc desktop --layout tiled; {bspc desktop --layout tiled, ~/.scripts/bspwm-grid-layout}
+  # bsp-layout set tiled; {bsp-layout set tiled, ~/.scripts/bspwm-grid-layout, bsp-layout set tall, bsp-layout set rtall, bsp-layout set wide, bsp-layout set rwide}
 
 # Focus Selected Desktop
 super + {q,w,e,r,t,y,u,i,o}
@@ -21,6 +23,10 @@ super + shift + {q,w,e,r,t,y,u,i,o}
 # Toggle fullscreen of window
 super + f
   bspc node --state \~fullscreen
+
+# Set the window state
+super + shift + f
+  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Focus next desktop
 super + {n,p}
@@ -59,17 +65,13 @@ super + shift + alt + {h,j,k,l}
 
 # Toggle gaps
 super + a
-  GAP={0,15}; \
+  GAP={0,15,75}; \
   bspc config window_gap $GAP;
 
 # Increase/decrease window gap on focused desktop
 # super + bracket{left,right}
 super + shift + alt + {comma,i}
   bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
-
-# Set the window state
-super + shift + space
-  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Flip desktop
 super + {_,shift + }x
@@ -119,6 +121,11 @@ super + shift + KP_Enter
 # dmenu
 super + space
   ~/.scripts/dmenu-rjh
+
+# Set the window state
+super + shift + space
+  rofi -combi-modi window,drun -show combi -modi combi
+  # rofi -show
 
 super + v
   copyq toggle
