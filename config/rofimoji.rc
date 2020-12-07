@@ -1,0 +1,4 @@
+insert-with-clipboard = true
+skin-tone = neutral
+# box_drawing, musical_symbols
+files = [emojis, arrows, number_forms]

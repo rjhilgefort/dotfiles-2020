@@ -99,6 +99,7 @@ bspc rule -a Slack desktop='^3' follwo=on
 bspc rule -a discord desktop='^3' follwo=on
 bspc rule -a android-messages-desktop desktop='^3' follwo=on
 bspc rule -a Caprine desktop='^3' follwo=on
+bspc rule -a Keybase desktop='^3' follwo=on
 # bspc rule -a Todoist desktop='^4' follwo=on # TODO: this is the elctron version
 bspc rule -a todoist-nativefier-409272 desktop='^4' follwo=on
 bspc rule -a Toggl\ Desktop desktop='^4' follwo=on

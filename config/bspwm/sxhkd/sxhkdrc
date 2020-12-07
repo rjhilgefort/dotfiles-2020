@@ -10,7 +10,7 @@ super + s
 # TODO: There's "even" but it doesn't work, hence the script
 super + d
   bspc desktop --layout tiled; {bspc desktop --layout tiled, ~/.scripts/bspwm-grid-layout}
-  # bsp-layout set tiled; {bsp-layout set tiled, ~/.scripts/bspwm-grid-layout, bsp-layout set tall, bsp-layout set rtall, bsp-layout set wide, bsp-layout set rwide}
+  # bspc desktop --layout tiled; {bspc desktop --layout tiled, ~/.scripts/bspwm-grid-layout, bsp-layout set tall, bsp-layout set rtall, bsp-layout set wide, bsp-layout set rwide}
 
 # Focus Selected Desktop
 super + {q,w,e,r,t,y,u,i,o}
@@ -119,13 +119,21 @@ super + shift + KP_Enter
 	thunar
 
 # dmenu
-super + space
+super + shift + space
   ~/.scripts/dmenu-rjh
 
-# Set the window state
-super + shift + space
-  rofi -combi-modi window,drun -show combi -modi combi
-  # rofi -show
+# https://github.com/davatorium/rofi
+# https://github.com/Mange/rofi-emoji
+super + space
+  rofi -modi window,drun,emoji,calc -combi-omni window,drun,emoji -show combi -omni combi 
+
+# DOCS:   https://github.com/fdw/rofimoji
+# CONFIG: ~/.config/rofimoji.rc
+# NOTE:   By default, rofimoji will show the last ten recently used characters separately; 
+#         you can insert them with alt+1, alt+2 and so on. It will use the default insertion Method. 
+#         If you don't want this, you can set --max=recent to 0.
+super + shift + semicolon 
+  rofimoji
 
 super + v
   copyq toggle
