@@ -9,7 +9,8 @@ super + s
 # Tiled layouts
 # TODO: There's "even" but it doesn't work, hence the script
 super + d
-  bspc desktop --layout tiled; {bspc desktop --layout tiled, ~/.scripts/bspwm-grid-layout}
+  bspc desktop --layout tiled; {bsp-layout set tiled, bsp-layout set grid, bsp-layout set tall, bsp-layout set rtall, bsp-layout set wide, bsp-layout set rwide}
+  # bspc desktop --layout tiled; {bspc desktop --layout tiled, ~/.scripts/bspwm-grid-layout}
   # bspc desktop --layout tiled; {bspc desktop --layout tiled, ~/.scripts/bspwm-grid-layout, bsp-layout set tall, bsp-layout set rtall, bsp-layout set wide, bsp-layout set rwide}
 
 # Focus Selected Desktop
@@ -133,7 +134,7 @@ super + space
 #         you can insert them with alt+1, alt+2 and so on. It will use the default insertion Method. 
 #         If you don't want this, you can set --max=recent to 0.
 super + shift + semicolon 
-  rofimoji
+  rofimoji 
 
 super + v
   copyq toggle

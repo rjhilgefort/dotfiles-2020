@@ -44,11 +44,13 @@ picom --config $HOME/.config/bspwm/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 run volumeicon &
-# run synology-drive &
+run synology-drive &
 run copyq &
 run flameshot &
 run rescuetime &
 run logid &
+# https://gitlab.com/jallbrit/desknamer
+# run desknamer &
 
 ### Foreground Apps
 run termite &
