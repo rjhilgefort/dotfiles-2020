@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# https://www.reddit.com/r/bspwm/comments/dmrsrb/focus_or_run/
+
+if [ -n "$1" ]; then
+    xdotool search --onlyvisible --classname $1 windowunmap || 
+    xdotool search --classname $1 windowmap || exec $1 &
+    # xdotool search --onlyvisible --classname $1 || wmctrl -a $1 &
+else
+    echo "you didn't give an argument"
+fi

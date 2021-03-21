@@ -93,7 +93,7 @@ super + Return
 super + KP_Enter
   termite
 
-# Reload bspwm and sxhkd
+# Reload sxhkd
 super + shift + s
 	pkill -USR1 -x sxhkd; # todo: notify
 
@@ -112,12 +112,6 @@ super + shift + c
 # Logout
 super + shift + alt + c
   arcolinux-logout
-
-#File-Manager
-super + shift + Return
-	thunar
-super + shift + KP_Enter
-	thunar
 
 # dmenu
 super + shift + space
@@ -215,23 +209,6 @@ ctrl + alt + u
 ctrl + alt + r
   rofi-theme-selector
 
-#Spotify
-ctrl + alt + s
-   spotify
-
-#Termite
-ctrl + alt + Return
-    termite
-
-#termite
-ctrl + alt + t
-    termite
-
-#Xfce4-appfinder
-# TODO: Use this
-ctrl + alt + a
-  xfce4-appfinder
-
 #############################################################
 #     MULTIMEDIA KEYS
 #############################################################
@@ -306,3 +283,27 @@ super + ctrl + {u,i,o,p}
 # Define splitting ratio for next window on leaf/parent
 super + ctrl + {_,shift +}{1-9}
 	bspc node {_,@/} --presel-ratio 0.{1-9}
+
+#################################################################
+# SUPER + ALT KEYS
+# bspc desktop --focus ^2 && firefox
+#################################################################
+
+# KP_Enter
+super + alt + Return
+  termite
+
+super + alt + t
+  termite
+
+super + alt + a
+  xfce4-appfinder
+
+super + alt + d
+	thunar
+
+super + alt + f
+	~/.scripts/focus-or-open firefox
+
+super + alt + s
+	~/.scripts/focus-or-open spotify

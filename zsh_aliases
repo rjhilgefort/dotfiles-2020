@@ -38,3 +38,5 @@ alias keyboard-key-repeat="xset r rate 150 50"
 
 # Do this if you install a new nvidia driver?
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+alias xclip="xclip -selection c"
