@@ -95,3 +95,6 @@ git-config-splunk() {
 cheat() {
   curl cht.sh/$1
 }
+
+# Weather
+alias weather="curl wttr.in/Evergreen+Colorado"
