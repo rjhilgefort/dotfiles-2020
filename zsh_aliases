@@ -79,15 +79,15 @@ alias pm='pm2'
 # gitconfig switching
 alias git-whoami='echo "Current user: $(git config user.email)"'
 git-config-rjh() {
-  ln -sf ~/.dotfiles/.gitconfig.rjhilgefort ~/.gitconfig
+  ln -sf ~/.dotfiles/gitconfig.rjhilgefort ~/.gitconfig
   git-whoami
 }
 git-config-pwc() {
-  ln -sf ~/.dotfiles/.gitconfig.pwc ~/.gitconfig
+  ln -sf ~/.dotfiles/gitconfig.pwc ~/.gitconfig
   git-whoami
 }
 git-config-splunk() {
-  ln -sf ~/.dotfiles/.gitconfig.splunk ~/.gitconfig
+  ln -sf ~/.dotfiles/gitconfig.splunk ~/.gitconfig
   git-whoami
 }
 
