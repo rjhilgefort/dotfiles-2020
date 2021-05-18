@@ -31,8 +31,6 @@ alias listopenports='sudo lsof -i -P | grep -i "listen"'
 alias timezone-mountain="timedatectl set-timezone America/Denver"
 alias timezone-eastern="timedatectl set-timezone America/Kentucky/Louisville"
 
-alias y="yarn"
-
 alias network-restart="sudo systemctl restart NetworkManager"
 alias keyboard-key-repeat="xset r rate 150 50"
 
@@ -41,6 +39,64 @@ alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 alias xclip="xclip -selection c"
 
+# General
+alias cl="clear"
+alias g="git"
+
+# Homebrew
+alias b="brew"
+alias bs="brew search"
+alias bi="brew install"
+
+# NPM / Yarn
+alias n="npm"
+alias ni="npm install"
+alias nis="npm install --save"
+alias nisd="npm install --save-dev"
+alias nr="npm run"
+alias y="yarn"
+alias yi="yarn install"
+alias ya="yarn add"
+alias yad="yarn add --dev"
+
+# docker
+alias d='docker'
+alias d-containers-stop-all='docker stop $(docker ps -a -q)'
+alias d-containers-remove-all='docker rm $(docker ps -a -q)'
+alias d-images-remove-all='docker rmi $(docker images -q)'
+alias d-volume-remove-all='docker volume rm $(docker volume ls -qf dangling=true)'
+d-exec() { docker exec -it $1 bash; }
+
+# docker-compose
+alias dc='docker-compose'
+
+# ranger
+alias r='ranger'
+
+# pm2
+alias pm='pm2'
+
+# gitconfig switching
+alias git-whoami='echo "Current user: $(git config user.email)"'
+git-config-rjh() {
+  ln -sf ~/.dotfiles/gitconfig.rjhilgefort ~/.gitconfig
+  git-whoami
+}
+git-config-pwc() {
+  ln -sf ~/.dotfiles/gitconfig.pwc ~/.gitconfig
+  git-whoami
+}
+git-config-splunk() {
+  ln -sf ~/.dotfiles/gitconfig.splunk ~/.gitconfig
+  git-whoami
+}
+
+# https://cht.sh
+cheat() {
+  curl cht.sh/$1
+}
+
+# Weather
 alias weather="curl wttr.in/Evergreen+Colorado\?u"
 alias weather-v2="curl v2.wttr.in/Evergreen+Colorado\?u"
 alias weather-v3="curl v3.wttr.in/Evergreen+Colorado\?u"
