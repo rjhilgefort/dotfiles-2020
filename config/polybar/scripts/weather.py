@@ -15,7 +15,7 @@
 
 import requests
 
-CITY = "5425043"
+CITY = "5421418"
 # API_KEY = "756edce7e9d4c385ef9499a53492678c" # NOTE: ArcoKey
 API_KEY = "9d3d818ed5e8fd204811f44e6663eb7b"
 UNITS = "Imperial"

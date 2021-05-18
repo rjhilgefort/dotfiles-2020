@@ -40,3 +40,7 @@ alias keyboard-key-repeat="xset r rate 150 50"
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 alias xclip="xclip -selection c"
+
+alias weather="curl wttr.in/Evergreen+Colorado\?u"
+alias weather-v2="curl v2.wttr.in/Evergreen+Colorado\?u"
+alias weather-v3="curl v3.wttr.in/Evergreen+Colorado\?u"
