@@ -97,4 +97,6 @@ cheat() {
 }
 
 # Weather
-alias weather="curl wttr.in/Evergreen+Colorado"
+alias weather="curl wttr.in/Evergreen+Colorado\?u"
+alias weather-v2="curl v2.wttr.in/Evergreen+Colorado\?u"
+alias weather-v3="curl v3.wttr.in/Evergreen+Colorado\?u"
