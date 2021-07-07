@@ -10,7 +10,7 @@ shift + alt + ctrl - f : yabai -m window --toggle sticky;\
 # Change tiling padding
 alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt - z : yabai -m space --rotate 90
-alt - x : yabai -m space --mirror vertical
+alt - x : yabai -m space --mirror y-axis
 
 # change layout of desktop
 # TODO: Can't focus in stack mode
@@ -56,10 +56,10 @@ alt - i : yabai -m space --focus 8
 alt - o : yabai -m space --focus 9
 
 # Resize windows
-shift + alt + ctrl - h : yabai -m window west --resize right:-40:0 2> /dev/null || yabai -m window --resize right:-40:0
-shift + alt + ctrl - j : yabai -m window north --resize bottom:0:40 2> /dev/null || yabai -m window --resize bottom:0:40
-shift + alt + ctrl - k : yabai -m window south --resize top:0:-40 2> /dev/null || yabai -m window --resize top:0:-40
-shift + alt + ctrl - l : yabai -m window east --resize left:40:0 2> /dev/null || yabai -m window --resize left:40:0
+shift + alt + ctrl - h : yabai -m window west --resize right:-100:0 2> /dev/null || yabai -m window --resize right:-100:0
+shift + alt + ctrl - j : yabai -m window north --resize bottom:0:100 2> /dev/null || yabai -m window --resize bottom:0:100
+shift + alt + ctrl - k : yabai -m window south --resize top:0:-100 2> /dev/null || yabai -m window --resize top:0:-100
+shift + alt + ctrl - l : yabai -m window east --resize left:100:0 2> /dev/null || yabai -m window --resize left:100:0
 
 # change focus between tiling / floating windows
 # shift + alt - space : chunkc tiling::window --toggle float
