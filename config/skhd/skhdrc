@@ -13,16 +13,24 @@ alt - z : yabai -m space --rotate 90
 alt - x : yabai -m space --mirror y-axis
 
 # change layout of desktop
-# TODO: Can't focus in stack mode
 alt - s : yabai -m space --layout stack 
 alt - d : yabai -m space --layout bsp
 alt - g : yabai -m space --layout float
 
-# change focus
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+# change focus (bsp or stack)
+# TODO: When in stack, if at most previous, wrap around to last
+alt - h : [[ $(yabai -m query --spaces --space | jq -re '.type') = "bsp" ]]\
+          && yabai -m window --focus west\
+          || yabai -m window --focus stack.prev
+alt - j : [[ $(yabai -m query --spaces --space | jq -re '.type') = "bsp" ]]\
+          && yabai -m window --focus south\
+          || yabai -m window --focus stack.prev
+alt - k : [[ $(yabai -m query --spaces --space | jq -re '.type') = "bsp" ]]\
+          && yabai -m window --focus north\
+          || yabai -m window --focus stack.next
+alt - l : [[ $(yabai -m query --spaces --space | jq -re '.type') = "bsp" ]]\
+          && yabai -m window --focus east\
+          || yabai -m window --focus stack.next
 
 # move focused window
 shift + alt - h : yabai -m window --warp west
