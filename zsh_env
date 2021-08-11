@@ -14,6 +14,12 @@ eval "$(fnm env)"
 # Always list after cd
 # cd() { builtin cd "$@"; colorls -A --sort-dirs; }
 
+export YVM_DIR=/usr/local/opt/yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
