@@ -45,4 +45,4 @@ antigen apply
 [[ -s "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
 
 # Run a command
-neofetch; curl wttr.in/Evergreen+Colorado;
+neofetch #; curl wttr.in/Evergreen+Colorado;
