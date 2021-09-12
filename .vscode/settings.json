@@ -1,9 +1,17 @@
 {
     "cSpell.words": [
+        "CRONTABCMD",
         "Hilgefort",
         "Keypress",
+        "bindkey",
         "bspc",
+        "colorls",
         "combi",
+        "dscacheutil",
+        "eval",
+        "fasd",
+        "flushcache",
+        "killall",
         "randomizer",
         "rjhilgefort",
         "rofi",

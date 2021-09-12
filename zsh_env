@@ -3,6 +3,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
+# fnm
 eval "$(fnm env)"
 
 # fasd
@@ -16,9 +17,6 @@ eval "$(fnm env)"
 
 export YVM_DIR=/usr/local/opt/yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
-
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"

@@ -44,5 +44,15 @@ antigen apply
 [[ -s "$HOME/.zsh_functions" ]] && source "$HOME/.zsh_functions"
 [[ -s "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
 
+# Source OS specific configuration if they exist 
+case `uname` in
+  Darwin)
+    [[ -s "$HOME/.zsh_osx" ]] && source "$HOME/.zsh_osx"
+  ;;
+  Linux)
+    [[ -s "$HOME/.zsh_linux" ]] && source "$HOME/.zsh_linux"
+  ;;
+esac
+
 # Run a command
 neofetch #; curl wttr.in/Evergreen+Colorado;
