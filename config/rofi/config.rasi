@@ -1,6 +1,10 @@
 configuration {
-   // theme: "/home/rjhilgefort/.config/rofi/rofi-themes/User\ Themes/slate.rasi";
-   theme: "/home/rjhilgefort/.config/rofi/rofi-themes/Official\ Themes/Pop-Dark.rasi";
+   //theme: "/home/rjhilgefort/.config/rofi/rofi-themes/User\ Themes/onedark.rasi";
+   //theme: "/home/rjhilgefort/.config/rofi/rofi-themes/Official\ Themes/sidebar.rasi";
+   //theme: "/home/rjhilgefort/.config/rofi/rofi-themes/User\ Themes/sidetab.rasi";
+   theme: "/home/rjhilgefort/.config/rofi/rofi-themes/User\ Themes/sidetab-adapta.rasi";
+   //theme: "/home/rjhilgefort/.config/rofi/rofi-themes/User\ Themes/slate.rasi";
+   //theme: "/home/rjhilgefort/.config/rofi/rofi-themes/Official\ Themes/Pop-Dark.rasi";
    combi-hide-mode-prefix: true;
    font: "Fira Code 16";
 }
