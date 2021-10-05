@@ -82,10 +82,6 @@ git-config-rjh() {
   ln -sf ~/.dotfiles/gitconfig.rjhilgefort ~/.gitconfig
   git-whoami
 }
-git-config-pwc() {
-  ln -sf ~/.dotfiles/gitconfig.pwc ~/.gitconfig
-  git-whoami
-}
 git-config-splunk() {
   ln -sf ~/.dotfiles/gitconfig.splunk ~/.gitconfig
   git-whoami
