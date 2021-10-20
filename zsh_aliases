@@ -87,6 +87,11 @@ git-config-splunk() {
   git-whoami
 }
 
+# section_gitwhoami() {
+#   echo 'hi'
+# }
+# SPACESHIP_PROMPT_ORDER=($SPACESHIP_PROMPT_ORDER section_gitwhoami)
+
 # https://cht.sh
 cheat() {
   curl cht.sh/$1
