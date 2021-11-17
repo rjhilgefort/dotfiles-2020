@@ -18,7 +18,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle zdharma/history-search-multi-word
+antigen bundle rjhilgefort/history-search-multi-word
 export NVM_LAZY_LOAD=true
 export NVM_AUTO_USE=true
 antigen bundle lukechilds/zsh-nvm
@@ -56,3 +56,7 @@ esac
 
 # Run a command
 neofetch #; curl wttr.in/Evergreen+Colorado;
+
+# fnm
+export PATH=/Users/rjhilgefort/.fnm:$PATH
+eval "`fnm env`"
