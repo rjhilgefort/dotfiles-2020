@@ -4,7 +4,9 @@ bindkey '^[[B' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 # fnm
-eval "$(fnm env)"
+export PATH=/Users/rjhilgefort/.fnm:$PATH
+eval "`fnm env`"
+# eval "$(fnm env)"
 
 # fasd
 # eval "$(fasd --init auto)"

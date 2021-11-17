@@ -54,9 +54,6 @@ case `uname` in
   ;;
 esac
 
-# fnm
-export PATH=/Users/rjhilgefort/.fnm:$PATH
-eval "`fnm env`"
 
 # Run a command
 # neofetch; curl v2.wttr.in/Evergreen+Colorado\?u;
