@@ -97,15 +97,15 @@ SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   host          # Hostname section
   git           # Git section (git_branch + git_status)
-  hg            # Mercurial section (hg_branch  + hg_status)
+  # hg            # Mercurial section (hg_branch  + hg_status)
   package       # Package version
   gradle        # Gradle section
   maven         # Maven section
   node          # Node.js section
   ruby          # Ruby section
   elixir        # Elixir section
-  xcode         # Xcode section
-  swift         # Swift section
+  # xcode         # Xcode section
+  # swift         # Swift section
   golang        # Go section
   php           # PHP section
   rust          # Rust section
@@ -114,14 +114,14 @@ SPACESHIP_PROMPT_ORDER=(
   docker        # Docker section
   # aws           # Amazon Web Services section
   # gcloud        # Google Cloud Platform section
-  venv          # virtualenv section
-  conda         # conda virtualenv section
+  # venv          # virtualenv section
+  # conda         # conda virtualenv section
   pyenv         # Pyenv section
-  dotnet        # .NET section
-  ember         # Ember.js section
+  # dotnet        # .NET section
+  # ember         # Ember.js section
   kubectl       # Kubectl context section
   terraform     # Terraform workspace section
-  ibmcloud      # IBM Cloud section
+  # ibmcloud      # IBM Cloud section
   gitwhoami     # Shows current git user
   exec_time     # Execution time
   line_sep      # Line break
