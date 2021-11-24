@@ -101,7 +101,7 @@ SPACESHIP_PROMPT_ORDER=(
   package       # Package version
   gradle        # Gradle section
   maven         # Maven section
-  node          # Node.js section
+  # node          # Node.js section
   ruby          # Ruby section
   elixir        # Elixir section
   xcode         # Xcode section
