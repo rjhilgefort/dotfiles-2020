@@ -123,7 +123,7 @@ function providers() {
 }
 
 function exceptions() {
-  // unmapAllExcept([], /\/mail.google.com\//)
+  api.unmapAllExcept([], /\/mail.google.com\//)
 }
 
 ;(function main() {
