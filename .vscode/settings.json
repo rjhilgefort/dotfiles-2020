@@ -1,22 +1,28 @@
 {
-    "cSpell.words": [
-        "CRONTABCMD",
-        "Hilgefort",
-        "Keypress",
-        "bindkey",
-        "bspc",
-        "colorls",
-        "combi",
-        "dscacheutil",
-        "eval",
-        "fasd",
-        "flushcache",
-        "killall",
-        "randomizer",
-        "rjhilgefort",
-        "rofi",
-        "rofimoji",
-        "submodule",
-        "submodules"
-    ]
+  "cSpell.words": [
+    "bindkey",
+    "bspc",
+    "colorls",
+    "combi",
+    "contenteditable",
+    "CRONTABCMD",
+    "dscacheutil",
+    "eval",
+    "fasd",
+    "flushcache",
+    "Hilgefort",
+    "iunmap",
+    "Keypress",
+    "killall",
+    "mapkey",
+    "Omnibar",
+    "randomizer",
+    "rjhilgefort",
+    "rofi",
+    "rofimoji",
+    "submodule",
+    "submodules",
+    "unmap",
+    "unmappings"
+  ]
 }
