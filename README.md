@@ -1,4 +1,4 @@
-dotfiles-rjh-dell-2020
+dotfiles-2020
 ======================
 
 TODO
