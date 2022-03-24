@@ -102,3 +102,18 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 # Unmaintained extension that I store
 cp -a ~/Store/Programming/VSCodeExtensions/jakelucas.code-file-nav-0.7.2 ~/.vscode/extensions
 ```
+
+## Make Calendar Light Mode Always
+
+Overrides system preference.
+
+```sh
+osascript -e 'id of app "Calendar"'
+defaults write com.apple.iCal NSRequiresAquaSystemAppearance -bool Yes
+```
+
+Restore defaults
+
+```sh
+defaults delete com.apple.iCal NSRequiresAquaSystemAppearance
+```
