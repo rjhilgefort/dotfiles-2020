@@ -6,6 +6,7 @@
     "combi",
     "contenteditable",
     "CRONTABCMD",
+    "Dotfiles",
     "dotfiles",
     "dscacheutil",
     "eval",
@@ -13,17 +14,24 @@
     "flushcache",
     "Hilgefort",
     "iunmap",
+    "jakelucas",
     "Keypress",
     "killall",
+    "koekeishiya",
+    "lsrc",
     "mapkey",
+    "mkdir",
     "Omnibar",
     "randomizer",
+    "rcup",
     "rjhilgefort",
     "rofi",
     "rofimoji",
+    "skhd",
     "submodule",
     "submodules",
     "unmap",
-    "unmappings"
+    "unmappings",
+    "Yabai"
   ]
 }

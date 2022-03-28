@@ -141,3 +141,8 @@ cheat() {
 alias weather="curl wttr.in/Evergreen+Colorado\?u"
 alias weather-v2="curl v2.wttr.in/Evergreen+Colorado\?u"
 alias weather-v3="curl v3.wttr.in/Evergreen+Colorado\?u"
+
+# K8
+alias incbot-logs="kubectl get pods --namespace incident-response-bot | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n incident-response-bot -c incident-response-bot -f"
+alias incbot-test-logs="kubectl get pods --namespace incident-response-bot-test | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n incident-response-bot-test -c incident-response-bot -f"
+alias spur-bot-stage-logs="kubectl get pods --namespace spur-bot-stage | sed -ne 's/\(spur-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n spur-bot-stage -c spur-bot -f"
