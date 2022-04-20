@@ -19,3 +19,15 @@ if test -z $CRONTABCMD; then
   }
   $CRONTABCMD ~/.crontab
 fi
+
+js-install() {
+  if [[ -f "./package-lock.json" && -f "./yarn.lock" ]]; then
+    echo "❌ Both npm and yarn detected, preferring yarn"
+    yarn install
+  elif [[ -f "./yarn.lock" ]]; then
+    yarn install
+  elif [[ -f "./package-lock.json" ]]; then
+    npm install
+  fi
+}
+alias ji="js-install"
