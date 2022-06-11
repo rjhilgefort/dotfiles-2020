@@ -151,18 +151,23 @@ cp -a /opt/homebrew/share/antigen/antigen.zsh ~/.bin/
 
 ### Yabai
 
-For macOS 12.x.x
+https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 
 ```sh
+# Disable SIP
+
 brew install jq
-brew install koekeishiya/formulae/yabai --HEAD
+brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
 
-brew services start yabai && brew services start skhd
+sudo nvram boot-args=-arm64e_preview_abi
+# reboot
 
 sudo yabai --install-sa
 sudo yabai --load-sa
 
+brew services start yabai && brew services start skhd
+# or
 brew services restart yabai && brew services restart skhd
 ```
 
