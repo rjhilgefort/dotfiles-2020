@@ -6,8 +6,8 @@
     "combi",
     "contenteditable",
     "CRONTABCMD",
-    "Dotfiles",
     "dotfiles",
+    "Dotfiles",
     "dscacheutil",
     "eval",
     "fasd",
@@ -30,6 +30,7 @@
     "skhd",
     "submodule",
     "submodules",
+    "Trackpad",
     "unmap",
     "unmappings",
     "Yabai"
