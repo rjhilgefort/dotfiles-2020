@@ -91,6 +91,8 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 defaults write NSGlobalDomain KeyRepeat -int 1
 ```
 
+Log out and log back in.
+
 ### Track Pad settings
 
 - Tap to click
