@@ -72,6 +72,9 @@ brew install redis
 brew install dbus && brew services start dbus
 brew install android-messages
 brew install cleanshot
+brew install bartender
+brew install daisydisk
+brew install spotify
 ```
 
 ### Synology
@@ -211,3 +214,9 @@ brew install cleanshot
 ```
 
 Go to preferences on your old machine and match them on the new machine.
+
+## Metamask + Ronin Wallet
+
+Chrome extensions, recover your wallet with your seed phrase and remove from old computer.
+
+Test out by playing Axie Infinity.

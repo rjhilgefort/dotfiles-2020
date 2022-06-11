@@ -23,12 +23,9 @@ export YVM_DIR=/usr/local/opt/yvm
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-export VOLTA_HOME="$HOME/.volta"
-
 # Path updates
 path+=($HOME'/.bin')
 path+=($HOME'/.scripts')
-path+=($HOME'/.volta/bin')
 path+=($HOME'/Library/Python/3.8/bin')
 export PATH
 
