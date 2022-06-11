@@ -36,7 +36,7 @@ brew install karabiner-elements
 brew install tophat/bar/yvm
 brew install wget
 brew install ngrok
-brew install battlenet
+brew install battle-net
 brew install jq
 # brew install gimp
 brew install drawio
