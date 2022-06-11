@@ -178,6 +178,8 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 cp -a ~/Store/Programming/VSCodeExtensions/jakelucas.code-file-nav-0.7.2 ~/.vscode/extensions
 ```
 
+Turn on settings sync, sign in with GitHub.
+
 ## Make Calendar Light Mode Always
 
 Overrides system preference.
