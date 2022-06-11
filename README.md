@@ -33,7 +33,7 @@ brew install keycastr
 brew install rcm
 brew install rg
 brew install karabiner-elements
-brew install tophat/bar/yvm --without-node
+brew install tophat/bar/yvm
 brew install wget
 brew install ngrok
 brew install battlenet
