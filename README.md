@@ -71,6 +71,7 @@ brew install raycast
 brew install redis
 brew install dbus && brew services start dbus
 brew install android-messages
+brew install cleanshot
 ```
 
 ### Synology
@@ -191,3 +192,15 @@ Restore defaults
 ```sh
 defaults delete com.apple.iCal NSRequiresAquaSystemAppearance
 ```
+
+## Raycast
+
+You can find latest export in `~/Store/AppData/raycast`. Boot Raycast and import your settings.
+
+## Cleanshot
+
+```sh
+brew install cleanshot
+```
+
+Go to preferences on your old machine and match them on the new machine.
