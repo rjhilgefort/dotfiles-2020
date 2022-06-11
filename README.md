@@ -102,15 +102,21 @@ Log out and log back in.
 
 ### SSH
 
-Grab your settings from your old machine and put them in `.ssh`. You'll likely need to tighten restrictions like this:
+Can be found in your `Store` folder. Symlink them to your home directory (`.ssh`).
 
 ```sh
-chmod 600 ~/.ssh/<private_key>
+ln -s ~/Store/AppData/ssh ~/.ssh
+```
+
+You'll likely need to tighten restrictions like this:
+
+```sh
+chmod 600 ~/.ssh/id_rsa # or whatever private key
 ```
 
 ### Fonts
 
-FOnt is mostly configured to use "Dank Mono". Thank can be found in your `Store` folder:
+Font is mostly configured to use "Dank Mono". Can be found in your `Store` folder:
 
 ```
 cd ~/Store/Programming/Fonts/DankMono-491/
@@ -119,7 +125,7 @@ open .
 
 I've always installed the `otf` ones but `ttf` will also work. Open the folder and double click each file.
 
-### Dotfiles, RCM, Antigen, Kitty
+### Dotfiles, RCM, Antigen
 
 ```sh
 # Dotfiles download
@@ -138,12 +144,8 @@ rcup
 brew install antigen
 brew install lua
 mkdir ~/.bin
-cp -a /usr/local/share/antigen/antigen.zsh ~/.bin/
+cp -a /opt/homebrew/share/antigen/antigen.zsh ~/.bin/
 # Open a new shell
-
-# Kitty
-git clone --depth 1 git@github.com:dexpota/kitty-themes.git ~/.config/kitty/kitty-themes
-ln -sf ./kitty-themes/themes/snazzy.conf ~/.config/kitty/theme.conf
 ```
 
 ### Yabai
