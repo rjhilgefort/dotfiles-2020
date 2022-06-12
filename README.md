@@ -6,7 +6,7 @@
 
 Almost certainly incomplete instructions for what you need to do when setting up a new machine. This was last updated on _06/11/2022_.
 
-### Home Brew + Apps
+## Home Brew + Apps
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -77,7 +77,7 @@ brew install daisydisk
 brew install spotify
 ```
 
-### Synology
+## Synology
 
 ```sh
 brew install homebrew/cask-drivers/synology-drive
@@ -87,8 +87,9 @@ Need to sync `Store`
 
 - Alfred settings
 - Fonts
+- Raycast export
 
-### Key Repeat
+## Key Repeat
 
 ```sh
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
@@ -97,14 +98,19 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 
 Log out and log back in.
 
-### Track Pad settings
+## Track Pad settings
 
 - Tap to click
   - System Preferences > Trackpad > Tap to click.
 - Three finger drag
   - System Preferences > Accessibility > Pointer Controls > Trackpad Options > Enable Dragging > three finger drag
 
-### SSH
+## Spaces Reordering
+
+By default, spaces will reorder so you'll want to turn that off:
+System Preferences > Mission Control > Automatically rearrange ...
+
+## SSH
 
 Can be found in your `Store` folder. Symlink them to your home directory (`.ssh`).
 
@@ -118,7 +124,7 @@ You'll likely need to tighten restrictions like this:
 chmod 600 ~/.ssh/id_rsa # or whatever private key
 ```
 
-### Fonts
+## Fonts
 
 Font is mostly configured to use "Dank Mono". Can be found in your `Store` folder:
 
