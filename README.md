@@ -75,6 +75,7 @@ brew install cleanshot
 brew install bartender
 brew install daisydisk
 brew install spotify
+brew install zsa-wally
 ```
 
 ## Synology
