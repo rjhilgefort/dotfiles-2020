@@ -76,6 +76,7 @@ brew install bartender
 brew install daisydisk
 brew install spotify
 brew install zsa-wally
+brew install --cask 1password/tap/1password-cli
 ```
 
 ## Synology
@@ -213,6 +214,10 @@ defaults delete com.apple.iCal NSRequiresAquaSystemAppearance
 ## Raycast
 
 You can find latest export in `~/Store/AppData/raycast`. Boot Raycast and import your settings.
+
+```sh
+ln -f ~/Store/AppData/raycast/extensions/bookmarks/db.json ~/Library/Application\ Support/com.raycast.macos/extensions/bookmarks/db.json
+```
 
 ## Cleanshot
 
