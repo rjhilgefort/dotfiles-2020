@@ -4,13 +4,81 @@
 
 ## New Mac Setup
 
-Almost certainly incomplete instructions for what you need to do when setting up a new machine. This was last updated on _03/06/2022_.
+Almost certainly incomplete instructions for what you need to do when setting up a new machine. This was last updated on _06/11/2022_.
 
-### Home Brew + Apps
+## Home Brew + Apps
 
-TODO: Grep your output, include their instructions
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-### Synology
+Make yourself a quick script and copy this in
+
+```sh
+brew tap wez/wezterm && brew install --cask wez/wezterm/wezterm
+brew install alfred
+brew install discord
+brew install 1password
+brew install tig
+brew install notion
+brew install cacher
+brew install todoist
+brew install nvm
+brew install neofetch
+brew install antigen
+brew install lua
+# brew install insomnia
+brew install tree
+brew install keycastr
+brew install rcm
+brew install rg
+brew install karabiner-elements
+brew install tophat/bar/yvm
+brew install wget
+brew install ngrok
+brew install battle-net
+brew install jq
+# brew install gimp
+brew install drawio
+brew install istat-menus
+brew install google-cloud-sdk
+# brew install balenaetcher
+# brew install wimlib
+brew install go
+brew install visual-studio-code
+brew install python
+brew install tunnelblick
+brew install runjs
+brew install plex
+brew install plexamp
+# brew install toggl-track
+brew install signal
+brew install git-extras
+brew install fig
+brew install fzf
+brew install steam
+brew install postman
+brew install android-file-transfer
+brew install ripgrep
+brew install ripgrep-all
+brew install vlc
+brew install git-lfs
+brew install docker
+brew install expressvpn
+brew install obs
+brew install blackhole-2ch
+brew install raycast
+brew install redis
+brew install dbus && brew services start dbus
+brew install android-messages
+brew install cleanshot
+brew install bartender
+brew install daisydisk
+brew install spotify
+brew install zsa-wally
+```
+
+## Synology
 
 ```sh
 brew install homebrew/cask-drivers/synology-drive
@@ -20,25 +88,46 @@ Need to sync `Store`
 
 - Alfred settings
 - Fonts
+- Raycast export
 
-### Key Repeat
+## Key Repeat
 
 ```sh
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 defaults write NSGlobalDomain KeyRepeat -int 1
 ```
 
-### SSH
+Log out and log back in.
 
-Grab your settings from your old machine and put them in `.ssh`. You'll likely need to tighten restrictions like this:
+## Track Pad settings
+
+- Tap to click
+  - System Preferences > Trackpad > Tap to click.
+- Three finger drag
+  - System Preferences > Accessibility > Pointer Controls > Trackpad Options > Enable Dragging > three finger drag
+
+## Spaces Reordering
+
+By default, spaces will reorder so you'll want to turn that off:
+System Preferences > Mission Control > Automatically rearrange ...
+
+## SSH
+
+Can be found in your `Store` folder. Symlink them to your home directory (`.ssh`).
 
 ```sh
-chmod 600 ~/.ssh/<private_key>
+ln -s ~/Store/AppData/ssh ~/.ssh
 ```
 
-### Fonts
+You'll likely need to tighten restrictions like this:
 
-FOnt is mostly configured to use "Dank Mono". Thank can be found in your `Store` folder:
+```sh
+chmod 600 ~/.ssh/id_rsa # or whatever private key
+```
+
+## Fonts
+
+Font is mostly configured to use "Dank Mono". Can be found in your `Store` folder:
 
 ```
 cd ~/Store/Programming/Fonts/DankMono-491/
@@ -47,7 +136,7 @@ open .
 
 I've always installed the `otf` ones but `ttf` will also work. Open the folder and double click each file.
 
-### Dotfiles, RCM, Antigen, Kitty
+### Dotfiles, RCM, Antigen
 
 ```sh
 # Dotfiles download
@@ -66,28 +155,29 @@ rcup
 brew install antigen
 brew install lua
 mkdir ~/.bin
-cp -a /usr/local/share/antigen/antigen.zsh ~/.bin/
+cp -a /opt/homebrew/share/antigen/antigen.zsh ~/.bin/
 # Open a new shell
-
-# Kitty
-git clone --depth 1 git@github.com:dexpota/kitty-themes.git ~/.config/kitty/kitty-themes
-ln -sf ./kitty-themes/themes/snazzy.conf ~/.config/kitty/theme.conf
 ```
 
 ### Yabai
 
-For macOS 12.x.x
+https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 
 ```sh
+# Disable SIP
+
 brew install jq
-brew install koekeishiya/formulae/yabai --HEAD
+brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
 
-brew services start yabai && brew services start skhd
+sudo nvram boot-args=-arm64e_preview_abi
+# reboot
 
 sudo yabai --install-sa
 sudo yabai --load-sa
 
+brew services start yabai && brew services start skhd
+# or
 brew services restart yabai && brew services restart skhd
 ```
 
@@ -103,6 +193,8 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 cp -a ~/Store/Programming/VSCodeExtensions/jakelucas.code-file-nav-0.7.2 ~/.vscode/extensions
 ```
 
+Turn on settings sync, sign in with GitHub.
+
 ## Make Calendar Light Mode Always
 
 Overrides system preference.
@@ -117,3 +209,21 @@ Restore defaults
 ```sh
 defaults delete com.apple.iCal NSRequiresAquaSystemAppearance
 ```
+
+## Raycast
+
+You can find latest export in `~/Store/AppData/raycast`. Boot Raycast and import your settings.
+
+## Cleanshot
+
+```sh
+brew install cleanshot
+```
+
+Go to preferences on your old machine and match them on the new machine.
+
+## Metamask + Ronin Wallet
+
+Chrome extensions, recover your wallet with your seed phrase and remove from old computer.
+
+Test out by playing Axie Infinity.
