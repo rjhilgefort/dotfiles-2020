@@ -9,5 +9,5 @@ return {
   font_size = 14.0,
   font = wezterm.font_with_fallback({ "Dank Mono" }),
 
-  scrollback_lines = 3500,
+  scrollback_lines = 14000,
 }
