@@ -215,9 +215,22 @@ defaults delete com.apple.iCal NSRequiresAquaSystemAppearance
 
 You can find latest export in `~/Store/AppData/raycast`. Boot Raycast and import your settings.
 
+### Bookmarks
+
+```sh
+git clone git@github.com:JoshYork/raycast-bookmarks.git
+cd raycast-bookmarks
+npm install
+npm run build
+```
+
+Import the extension from Raycast
+
 ```sh
 ln -f ~/Store/AppData/raycast/extensions/bookmarks/db.json ~/Library/Application\ Support/com.raycast.macos/extensions/bookmarks/db.json
 ```
+
+Then setup your shortcuts and hotkeys (b, ba)
 
 ## Cleanshot
 
