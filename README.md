@@ -51,7 +51,6 @@ brew install tunnelblick
 brew install runjs
 brew install plex
 brew install plexamp
-# brew install toggl-track
 brew install signal
 brew install git-extras
 brew install fig
@@ -77,6 +76,9 @@ brew install daisydisk
 brew install spotify
 brew install zsa-wally
 brew install --cask 1password/tap/1password-cli
+brew install arctype
+brew install fantastical
+brew install postgresql
 ```
 
 ## Synology
