@@ -137,6 +137,14 @@ cheat() {
   curl cht.sh/$1
 }
 
+# tere
+# https://github.com/mgunyho/tere
+tere() {
+  local result=$(command tere "$@")
+  [ -n "$result" ] && cd -- "$result"
+}
+alias td="tere"
+
 # Weather
 alias weather="curl wttr.in/Evergreen+Colorado\?u"
 alias weather-v2="curl v2.wttr.in/Evergreen+Colorado\?u"

@@ -79,6 +79,7 @@ brew install --cask 1password/tap/1password-cli
 brew install arctype
 brew install fantastical
 brew install postgresql
+brew install difftastic
 ```
 
 ## Synology
