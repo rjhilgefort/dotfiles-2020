@@ -51,7 +51,6 @@ brew install tunnelblick
 brew install runjs
 brew install plex
 brew install plexamp
-# brew install toggl-track
 brew install signal
 brew install git-extras
 brew install fig
@@ -77,6 +76,10 @@ brew install daisydisk
 brew install spotify
 brew install zsa-wally
 brew install --cask 1password/tap/1password-cli
+brew install arctype
+brew install fantastical
+brew install postgresql
+brew install difftastic
 ```
 
 ## Synology
@@ -215,9 +218,22 @@ defaults delete com.apple.iCal NSRequiresAquaSystemAppearance
 
 You can find latest export in `~/Store/AppData/raycast`. Boot Raycast and import your settings.
 
+### Bookmarks
+
+```sh
+git clone git@github.com:JoshYork/raycast-bookmarks.git
+cd raycast-bookmarks
+npm install
+npm run build
+```
+
+Import the extension from Raycast
+
 ```sh
 ln -f ~/Store/AppData/raycast/extensions/bookmarks/db.json ~/Library/Application\ Support/com.raycast.macos/extensions/bookmarks/db.json
 ```
+
+Then setup your shortcuts and hotkeys (b, ba)
 
 ## Cleanshot
 
