@@ -167,5 +167,9 @@
 	pushInsteadOf = "git://bitbucket.org/"
 [url "git://bitbucket.org/"]
 	insteadOf = "bitbucket:"
+
 [init]
 	defaultBranch = main
+
+[http]
+	sslVerify = false

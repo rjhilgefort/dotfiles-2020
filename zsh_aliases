@@ -142,6 +142,8 @@ cheat() {
 
 # tere
 # https://github.com/mgunyho/tere
+# local result=$(/Users/rhilgefort/.cargo/bin/tere "$@")
+# [ -n "$result" ] && cd -- "$result"
 tere() {
   local result=$(command tere "$@")
   [ -n "$result" ] && cd -- "$result"
@@ -153,7 +155,14 @@ alias weather="curl wttr.in/Evergreen+Colorado\?u"
 alias weather-v2="curl v2.wttr.in/Evergreen+Colorado\?u"
 alias weather-v3="curl v3.wttr.in/Evergreen+Colorado\?u"
 
-# K8
+# Splunk K8
+#####################################################
+alias incbot-db-backup="rm -f fetchedDatabase.json; kubectl get pods --namespace incident-response-bot | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl exec -n incident-response-bot {} -- cat /data/pseudoDatabase.json > fetchedDatabase.json && tail fetchedDatabase.json"
+alias incbot-db-backup-backup="rm -f fetchedDatabase-backup.json; kubectl get pods --namespace incident-response-bot | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl exec -n incident-response-bot {} -- cat /data/pseudoDatabase_backup.json > fetchedDatabase-backup.json && tail fetchedDatabase-backup.json"
+alias incbot-test-db-backup="rm -f fetchedDatabase-test.json; kubectl get pods --namespace incident-response-bot-test | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl exec -n incident-response-bot-test {} -- cat /data/pseudoDatabase.json > fetchedDatabase-test.json && tail fetchedDatabase-test.json"
+alias incbot-test-db-backup-backup="rm -f fetchedDatabase-test-backup.json; kubectl get pods --namespace incident-response-bot-test | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl exec -n incident-response-bot-test {} -- cat /data/pseudoDatabase_backup.json > fetchedDatabase-test-backup.json && tail fetchedDatabase-test-backup.json"
 alias incbot-logs="kubectl get pods --namespace incident-response-bot | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n incident-response-bot -c incident-response-bot -f"
 alias incbot-test-logs="kubectl get pods --namespace incident-response-bot-test | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n incident-response-bot-test -c incident-response-bot -f"
-alias spur-bot-stage-logs="kubectl get pods --namespace spur-bot-stage | sed -ne 's/\(spur-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n spur-bot-stage -c spur-bot -f"
+# alias spur-bot-stage-logs="kubectl get pods --namespace spur-bot-stage | sed -ne 's/\(spur-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n spur-bot-stage -c spur-bot -f"
+alias spur-bot-logs="kubectl --namespace spur-bot logs -l app=spur-bot --tail=2000 -f"
+alias spur-bot-stage-logs="kubectl --namespace spur-bot-stage logs -l app=spur-bot --tail=2000 -f"
