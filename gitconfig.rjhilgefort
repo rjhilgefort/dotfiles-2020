@@ -170,4 +170,3 @@
 
 [http]
 	sslVerify = false
-	sslbackend = schannel
