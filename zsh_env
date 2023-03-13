@@ -11,6 +11,9 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 # fasd
 # eval "$(fasd --init auto)"
 
+# https://direnv.net/docs/hook.html#zsh
+eval "$(direnv hook zsh)"
+
 # colorls - https://github.com/athityakumar/colorls
 # source $(dirname $(gem which colorls))/tab_complete.sh
 
