@@ -5,8 +5,8 @@
 [pull]
 	rebase = false
 
-[diff]
-	external = difft
+# [diff]
+# 	external = difft
 
 [alias]
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -167,6 +167,9 @@
 	pushInsteadOf = "git://bitbucket.org/"
 [url "git://bitbucket.org/"]
 	insteadOf = "bitbucket:"
+
+[init]
+	defaultBranch = main
 
 [http]
 	sslVerify = false
