@@ -1,3 +1,6 @@
+# V4 Updates
+# https://spaceship-prompt.sh/blog/2022-spaceship-v4/#breaking-changes
+
 # Display time
 SPACESHIP_TIME_SHOW=true
 
