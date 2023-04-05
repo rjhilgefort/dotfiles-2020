@@ -115,6 +115,22 @@ Log out and log back in.
 By default, spaces will reorder so you'll want to turn that off:
 System Preferences > Mission Control > Automatically rearrange > off
 
+## Dock
+
+To have the dock be delayed from popping up, set the delay to a really long time
+
+```sh
+defaults write com.apple.dock autohide-delay -float 1000; killall Dock
+```
+
+Restore the behavior with
+
+```sh
+defaults delete com.apple.dock autohide-delay; killall Dock
+```
+
+Instead of setting a small delay to get your dock back when needed, simply unhide the dock with command-option-D. This basically gives you full control on when you want to see your dock.
+
 ## SSH
 
 Can be found in your `Store` folder. Symlink them to your home directory (`.ssh`).
