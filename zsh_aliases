@@ -164,5 +164,5 @@ alias incbot-test-db-backup-backup="rm -f fetchedDatabase-test-backup.json; kube
 alias incbot-logs="kubectl get pods --namespace incident-response-bot | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n incident-response-bot -c incident-response-bot -f"
 alias incbot-test-logs="kubectl get pods --namespace incident-response-bot-test | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n incident-response-bot-test -c incident-response-bot -f"
 # alias spur-bot-stage-logs="kubectl get pods --namespace spur-bot-stage | sed -ne 's/\(spur-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n spur-bot-stage -c spur-bot -f"
-alias spur-bot-logs="kubectl --namespace spur-bot logs -l app=spur-bot --tail=2000 -f"
-alias spur-bot-stage-logs="kubectl --namespace spur-bot-stage logs -l app=spur-bot --tail=2000 -f"
+alias spur-bot-logs="kubectl --namespace spur-bot logs -l app=spur-bot --tail=10000 -f"
+alias spur-bot-stage-logs="kubectl --namespace spur-bot-stage logs -l app=spur-bot --tail=10000 -f"
