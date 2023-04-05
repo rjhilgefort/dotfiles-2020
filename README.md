@@ -113,7 +113,7 @@ Log out and log back in.
 ## Spaces Reordering
 
 By default, spaces will reorder so you'll want to turn that off:
-System Preferences > Mission Control > Automatically rearrange ...
+System Preferences > Mission Control > Automatically rearrange > off
 
 ## SSH
 
@@ -225,12 +225,6 @@ git clone git@github.com:JoshYork/raycast-bookmarks.git
 cd raycast-bookmarks
 npm install
 npm run build
-```
-
-Import the extension from Raycast
-
-```sh
-ln -f ~/Store/AppData/raycast/extensions/bookmarks/db.json ~/Library/Application\ Support/com.raycast.macos/extensions/bookmarks/db.json
 ```
 
 Then setup your shortcuts and hotkeys (b, ba)
