@@ -60,4 +60,4 @@ esac
 # Run a command
 # neofetch; curl v2.wttr.in/Evergreen+Colorado\?u;
 # neofetch
-curl v2.wttr.in/Evergreen+Colorado\?u
+# curl v2.wttr.in/Evergreen+Colorado\?u
