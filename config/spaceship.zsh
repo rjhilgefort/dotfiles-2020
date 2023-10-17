@@ -14,7 +14,7 @@ SPACESHIP_DIR_TRUNC_REPO=false
 # spaceship add --before char vi_mode
 
 spaceship_gitwhoami() {
-  spaceship::section "green" "" $(git-whoami) ""
+  spaceship::section "" "" $(git-whoami) ""
 }
 SPACESHIP_CHAR_SYMBOL="λ "
 SPACESHIP_PROMPT_ORDER=(
@@ -48,7 +48,7 @@ SPACESHIP_PROMPT_ORDER=(
   kubectl       # Kubectl context section
   terraform     # Terraform workspace section
   # ibmcloud      # IBM Cloud section
-  # gitwhoami     # Shows current git user
+  gitwhoami     # Shows current git user
   exec_time     # Execution time
   line_sep      # Line break
   battery       # Battery level and status

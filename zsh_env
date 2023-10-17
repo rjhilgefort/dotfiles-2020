@@ -29,6 +29,8 @@ export EDITOR="$VISUAL"
 # Path updates
 path+=($HOME'/.bin')
 path+=($HOME'/.scripts')
+path+=($HOME'/.yarn/bin')
+path+=($HOME'/.config/yarn/global/node_modules/.bin')
 path+=($HOME'/Library/Python/3.8/bin')
+path+=($HOME'/Library/Python/3.9/bin')
 export PATH
-
