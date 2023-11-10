@@ -68,6 +68,7 @@ alias d-containers-stop-all='docker stop $(docker ps -a -q)'
 alias d-containers-remove-all='docker rm $(docker ps -a -q)'
 alias d-images-remove-all='docker rmi $(docker images -q)'
 alias d-volume-remove-all='docker volume rm $(docker volume ls -qf dangling=true)'
+alias d-network-remove-all='docker network rm $(docker network ls -q)'
 d-exec() { docker exec -it $1 bash; }
 
 # docker-compose
@@ -166,3 +167,8 @@ alias incbot-test-logs="kubectl get pods --namespace incident-response-bot-test 
 # alias spur-bot-stage-logs="kubectl get pods --namespace spur-bot-stage | sed -ne 's/\(spur-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n spur-bot-stage -c spur-bot -f"
 alias spur-bot-logs="kubectl --namespace spur-bot logs -l app=spur-bot --tail=2000 -f"
 alias spur-bot-stage-logs="kubectl --namespace spur-bot-stage logs -l app=spur-bot --tail=2000 -f"
+
+# Origin
+#####################################################
+alias origin-aws-postgres-session="aws ssm start-session --profile=origin-source-development --region us-west-1 --target i-0d62c9487e0fdc39f --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host=\"main-postgres12.cluster-c9268pfktqlm.us-west-1.rds.amazonaws.com\",portNumber=\"5432\",localPortNumber=\"5433\""
+alias ssh-origin-bastion="ssh -A -i ~/.ssh/id_rsa ubuntu@ec2-54-183-30-183.us-west-1.compute.amazonaws.com"

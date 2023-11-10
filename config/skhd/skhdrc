@@ -15,7 +15,7 @@ alt - x : yabai -m space --mirror y-axis
 # change layout of desktop
 alt - s : yabai -m space --layout stack 
 alt - d : yabai -m space --layout bsp
-alt - g : yabai -m space --layout float
+# alt - g : yabai -m space --layout float
 
 # change focus (bsp or stack)
 # TODO: When in stack, if at most previous, wrap around to last
