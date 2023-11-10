@@ -1,10 +1,10 @@
 format = """
 $directory\
+$custom\
 $nodejs\
 $git_branch\
 $git_state\
 $git_status\
-$custom\
 $time
 $character\
 """
@@ -44,14 +44,19 @@ style = "#d371f7"
 
 [git_branch]
 format = "[$symbol$branch]($style)"
-style = "#ff6060"
+style = "green"
+# style = "#68A063"
+# style = "#ff6060"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "#ff6060"
+style = "green"
+# style = "#68A063"
+# style = "#ff6060"
 
 [time]
 disabled = false
-format = '[$time]($style)'
+format = '[\[$time\]]($style)'
 time_format = '%r'
+# style = "#CCA01D"
 style = 'bright-black'
