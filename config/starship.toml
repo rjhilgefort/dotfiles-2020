@@ -1,0 +1,61 @@
+format = """
+$directory\
+$nodejs\
+$custom\
+$git_branch\
+$git_state\
+$git_status\
+$time
+$character\
+"""
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)](218)"
+style = "#ff6060"
+stashed = "≡"
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+
+[directory]
+style = "#1ECBE1"
+
+[nodejs]
+disabled = true
+format = "[$symbol($version )]($style)"
+style = "#68A063 bold"
+
+#[character]
+# success_symbol = "[❯](purple)"
+# error_symbol = "[❯](red)"
+# vimcmd_symbol = "[❮](green)"
+[character]
+success_symbol = "[λ](green)"
+error_symbol = "[λ](red)"
+vimcmd_symbol = "[❮](green)"
+
+[package]
+disabled = true
+
+[custom.gitwhoami]
+command = "git config user.profile" # shows output of command
+when = "exit 0"
+format = "[$output]($style) "
+style = "#d371f7 bold"
+
+# [git_branch]
+# format = "[$branch]($style)"
+# style = "bright-black"
+[git_branch]
+format = "[$symbol$branch]($style)"
+style = "#F1502F"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "#F1502F"
+
+[time]
+disabled = false
+format = '[$time]($style)'
+time_format = '%r'
+style = 'bright-black'
