@@ -1,6 +1,7 @@
 [user]
 	name = Rob Hilgefort
 	email = rjhilgefort@gmail.com
+	profile = personal
 	
 [init]
 	defaultBranch = main
