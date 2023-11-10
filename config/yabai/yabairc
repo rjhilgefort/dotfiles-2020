@@ -59,14 +59,17 @@ yabai -m space 7 --label "Temp"
 # Unmanaged Windows
 # yabai -m rule --add app="^System Preferences$"     manage=off border=off space=8
 
-yabai -m rule --add app="kitty" space=1
+yabai -m rule --add app="WezTerm" space=1
 yabai -m rule --add app="Code" space=1
 yabai -m rule --add app="Firefox" space=2
 yabai -m rule --add app="Google Chrome" space=2
-yabai -m rule --add app="Discord" space=3
-yabai -m rule --add app="Android Messages" space=3
+yabai -m rule --add app="Fantastical" space=2
+yabai -m rule --add app="Arctype" space=2
 yabai -m rule --add app="Slack" space=3
+yabai -m rule --add app="Discord" space=3
+yabai -m rule --add app="Messages" space=3
 yabai -m rule --add app="Messenger" space=3
+yabai -m rule --add app="Signal" space=3
 yabai -m rule --add app="Todoist" space=4
 yabai -m rule --add app="Toggl" space=4
 yabai -m rule --add app="Spotify" space=4
