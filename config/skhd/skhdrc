@@ -13,7 +13,7 @@ alt - z : yabai -m space --rotate 90
 alt - x : yabai -m space --mirror y-axis
 
 # change layout of desktop
-alt - s : yabai -m space --layout stack 
+alt - s : yabai -m space --layout stack
 alt - d : yabai -m space --layout bsp
 # alt - g : yabai -m space --layout float
 
@@ -39,7 +39,7 @@ shift + alt - k : yabai -m window --warp north
 shift + alt - l : yabai -m window --warp east
 
 # focus on desktop
-alt - tab : yabai -m space --focus recent 
+alt - tab : yabai -m space --focus recent
 alt - p : skhd -k "ctrl - left"
 alt - n : skhd -k "ctrl - right"
 # standard
@@ -73,7 +73,7 @@ shift + alt + ctrl - l : yabai -m window east --resize left:100:0 2> /dev/null |
 # shift + alt - space : chunkc tiling::window --toggle float
 
 # Send window to desktop and follow focus
-shift + alt - tab : yabai -m window --space recent; yabai -m space --focus recent 
+shift + alt - tab : yabai -m window --space recent; yabai -m space --focus recent
 shift + alt - p : yabai -m window --space prev; yabai -m space --focus prev
 shift + alt - n : yabai -m window --space next; yabai -m space --focus next
 # standard
