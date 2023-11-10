@@ -1,7 +1,7 @@
 format = """
 $directory\
-$nodejs\
 $custom\
+$nodejs\
 $git_branch\
 $git_state\
 $git_status\
@@ -10,7 +10,7 @@ $character\
 """
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)"
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style) "
 style = "218"
 stashed = "≡"
 ahead = "⇡${count}"
@@ -35,21 +35,28 @@ vimcmd_symbol = "[❮](green bold)"
 disabled = true
 
 [custom.gitwhoami]
+disabled = false
+format = "[$symbol $output]($style) "
+symbol = "☺"
 command = "git config user.profile" # shows output of command
 when = "exit 0"
-format = "[$output]($style) "
-style = "#d371f7 bold"
+style = "#d371f7"
 
 [git_branch]
 format = "[$symbol$branch]($style)"
-style = "#ff6060"
+style = "green"
+# style = "#68A063"
+# style = "#ff6060"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "#ff6060"
+style = "green"
+# style = "#68A063"
+# style = "#ff6060"
 
 [time]
 disabled = false
-format = ' [$time]($style)'
+format = '[\[$time\]]($style)'
 time_format = '%r'
+# style = "#CCA01D"
 style = 'bright-black'
