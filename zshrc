@@ -35,7 +35,8 @@ antigen bundle lukechilds/zsh-nvm
 ### Theme
 # antigen theme robbyrussell
 # antigen theme refined # NOTE: pure
-antigen theme denysdovhan/spaceship-prompt # NOTE: A little slow to paint the git prompt
+antigen bundle spaceship-prompt/spaceship-vi-mode@main
+antigen theme denysdovhan/spaceship-prompt 
 
 # Tell Antigen that you're done.
 antigen apply

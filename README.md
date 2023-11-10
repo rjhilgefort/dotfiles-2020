@@ -113,7 +113,7 @@ Log out and log back in.
 ## Spaces Reordering
 
 By default, spaces will reorder so you'll want to turn that off:
-System Preferences > Mission Control > Automatically rearrange ...
+System Preferences > Mission Control > Automatically rearrange > off
 
 ## Dock
 
@@ -203,17 +203,47 @@ brew services restart yabai && brew services restart skhd
 
 ### VSCode
 
+Install VSCode
+
 ```sh
 brew install visual-studio-code
 
 # Allows press and hold in VIM
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-
-# Unmaintained extension that I store
-cp -a ~/Store/Programming/VSCodeExtensions/jakelucas.code-file-nav-0.7.2 ~/.vscode/extensions
 ```
 
 Turn on settings sync, sign in with GitHub.
+
+Setup `code-file-nav` extension.
+
+```sh
+cp -a ~/Store/Programming/VSCodeExtensions/jakelucas.code-file-nav-0.7.2 ~/.vscode/extensions
+```
+
+Update `~/.vscode/extensions/extensions.json` to include the following (in alphabetical order I think?):
+
+```json
+  {
+    "identifier": {
+      "id": "jakelucas.code-file-nav",
+      "uuid": "e3f26909-4865-4350-a891-1dfd2a411fc1"
+    },
+    "version": "0.7.2",
+    "location": {
+      "$mid": 1,
+      "path": "/Users/<YOUR_USERNAME>/.vscode/extensions/jakelucas.code-file-nav-0.7.2",
+      "scheme": "file"
+    },
+    "relativeLocation": "jakelucas.code-file-nav-0.7.2",
+    "metadata": {
+      "id": "e3f26909-4865-4350-a891-1dfd2a411fc1",
+      "publisherId": "d903e6ed-dc7a-4bf6-847c-31043b25bcc4",
+      "publisherDisplayName": "Jake Lucas"
+    }
+  },
+```
+
+Restart VSCode. If it errors, try again
 
 ## Make Calendar Light Mode Always
 
@@ -241,12 +271,6 @@ git clone git@github.com:JoshYork/raycast-bookmarks.git
 cd raycast-bookmarks
 npm install
 npm run build
-```
-
-Import the extension from Raycast
-
-```sh
-ln -f ~/Store/AppData/raycast/extensions/bookmarks/db.json ~/Library/Application\ Support/com.raycast.macos/extensions/bookmarks/db.json
 ```
 
 Then setup your shortcuts and hotkeys (b, ba)

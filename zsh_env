@@ -31,7 +31,10 @@ export AWS_DEFAULT_REGION=us-west-1
 # Path updates
 path+=($HOME'/.bin')
 path+=($HOME'/.scripts')
+path+=($HOME'/.yarn/bin')
+path+=($HOME'/.config/yarn/global/node_modules/.bin')
 path+=($HOME'/Library/Python/3.8/bin')
+path+=($HOME'/Library/Python/3.9/bin')
 path+=('/opt/homebrew/opt/libpq/bin')
 export PATH
 
