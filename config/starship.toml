@@ -10,7 +10,7 @@ $character\
 """
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)"
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style) "
 style = "218"
 stashed = "≡"
 ahead = "⇡${count}"
