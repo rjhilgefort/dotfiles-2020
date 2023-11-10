@@ -14,6 +14,9 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 # https://direnv.net/docs/hook.html#zsh
 eval "$(direnv hook zsh)"
 
+# starship
+eval "$(starship init zsh)"
+
 # colorls - https://github.com/athityakumar/colorls
 # source $(dirname $(gem which colorls))/tab_complete.sh
 
