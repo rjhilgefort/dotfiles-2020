@@ -14,7 +14,7 @@ format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($
 style = "218"
 stashed = "≡"
 ahead = "⇡${count}"
-diverged = "⇕⇡ ${ahead_count} ⇣ ${behind_count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
 
 [directory]
