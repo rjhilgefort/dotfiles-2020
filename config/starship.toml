@@ -11,8 +11,9 @@ $character\
 """
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style) "
-style = "218"
+format = " [[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)"
+style = "#ff6060 bold"
+# style = "218 bold"
 stashed = "≡"
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
