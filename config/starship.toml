@@ -10,6 +10,8 @@ $cmd_duration
 $character\
 """
 
+command_timeout = 5000
+
 [git_status]
 format = " [[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)"
 style = "#ff6060 bold"
@@ -40,7 +42,7 @@ disabled = true
 disabled = false
 format = "[$symbol $output]($style) "
 symbol = "☺"
-command = "git config user.profile" # shows output of command
+command = "git config user.profile"   # shows output of command
 when = "exit 0"
 style = "#d371f7"
 
