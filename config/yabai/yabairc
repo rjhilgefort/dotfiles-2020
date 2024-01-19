@@ -16,11 +16,11 @@ yabai -m config layout bsp
 
 # Gaps
 # yabai -m config top_padding    35 # > Monterey
-yabai -m config top_padding    10 # < Monterey
-yabai -m config bottom_padding 10
-yabai -m config left_padding   10
-yabai -m config right_padding  10
-yabai -m config window_gap     10
+yabai -m config top_padding    15 # < Monterey
+yabai -m config bottom_padding 15
+yabai -m config left_padding   15
+yabai -m config right_padding  15
+yabai -m config window_gap     15
 
 # Mouse
 yabai -m config focus_follows_mouse autoraise
@@ -38,13 +38,14 @@ yabai -m config auto_balance off
 yabai -m config split_ratio 0.5
 
 # Window Border
-yabai -m config window_border                on
-yabai -m config window_border_width          4
-# yabai -m config active_window_border_color   0xffff0000
-yabai -m config active_window_border_color   0xFF00AAFF 
-yabai -m config normal_window_border_color   0x01000000
+# Removed from yabai in: https://github.com/koekeishiya/yabai/issues/1889
+# yabai -m config window_border                on
+# yabai -m config window_border_width          4
+# yabai -m config active_window_border_color   0xffff0000 # red
+# yabai -m config active_window_border_color   0xFF00AAFF # blue
+# yabai -m config normal_window_border_color   0x01000000 # black
 # @see https://github.com/koekeishiya/yabai/issues/1471
-yabai -m config window_border_blur off
+# yabai -m config window_border_blur off
 
 # Space labels
 yabai -m space 1 --label "Coding"
@@ -77,3 +78,9 @@ yabai -m rule --add app="Toggl" space=4
 yabai -m rule --add app="Spotify" space=4
 yabai -m rule --add app="Notion" space=5
 
+# https://github.com/FelixKratz/JankyBorders
+# borders active_color=0xffff0000 inactive_color=0xff494d64 width=7.0 & # red
+# borders active_color=0xFF00AAFF inactive_color=0xff494d64 width=7.0 & # blue
+# borders active_color=0xffc7e1b8 inactive_color=0xff494d64 width=7.0 & # light green
+borders active_color=0xFF00FF80 inactive_color=0xff494d64 width=7.0 & # bright green
+# borders active_color=0xFF4CBB67 inactive_color=0xff494d64 width=7.0 & # forest green
