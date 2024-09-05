@@ -127,6 +127,6 @@ alias incbot-test-db-backup="rm -f fetchedDatabase-test.json; kubectl get pods -
 alias incbot-test-db-backup-backup="rm -f fetchedDatabase-test-backup.json; kubectl get pods --namespace incident-response-bot-test | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl exec -n incident-response-bot-test {} -- cat /data/pseudoDatabase_backup.json > fetchedDatabase-test-backup.json && tail fetchedDatabase-test-backup.json"
 alias incbot-logs="kubectl get pods --namespace incident-response-bot | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n incident-response-bot -c incident-response-bot -f"
 alias incbot-test-logs="kubectl get pods --namespace incident-response-bot-test | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n incident-response-bot-test -c incident-response-bot -f"
-# alias spur-bot-stage-logs="kubectl get pods --namespace spur-bot-stage | sed -ne 's/\(spur-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n spur-bot-stage -c spur-bot -f"
 alias spur-bot-logs="kubectl --namespace spur-bot logs -l app=spur-bot --tail=10000 -f"
 alias spur-bot-stage-logs="kubectl --namespace spur-bot-stage logs -l app=spur-bot --tail=10000 -f"
+# alias spur-bot-stage-logs="kubectl get pods --namespace spur-bot-stage | sed -ne 's/\(spur-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n spur-bot-stage -c spur-bot -f"
