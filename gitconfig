@@ -177,3 +177,6 @@
 
 [includeIf "gitdir:~/Code/splunk/"]
   path = ~/.gitconfig.splunk
+
+[includeIf "gitdir:~/Code/mavely/"]
+  path = ~/.gitconfig.mavely

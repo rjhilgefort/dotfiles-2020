@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
     "arctype",
+    "autohide",
     "Axie",
     "balenaetcher",
     "bindkey",
@@ -15,6 +16,7 @@
     "daisydisk",
     "dbus",
     "difftastic",
+    "direnv",
     "dotfiles",
     "Dotfiles",
     "drawio",
@@ -34,9 +36,12 @@
     "koekeishiya",
     "lsrc",
     "mapkey",
+    "mavely",
     "mkdir",
     "neofetch",
+    "nvram",
     "Omnibar",
+    "osascript",
     "plex",
     "plexamp",
     "randomizer",
@@ -55,10 +60,12 @@
     "tophat",
     "Trackpad",
     "tunnelblick",
+    "unhide",
     "unmap",
     "unmappings",
     "wezterm",
     "wimlib",
-    "Yabai"
+    "Yabai",
+    "yabairc"
   ]
 }

@@ -82,10 +82,43 @@ brew install postgresql
 brew install difftastic
 ```
 
+Pruned list 2024
+
+```sh
+brew install arc
+brew install 1password
+brew install raycast
+brew install karabiner-elements
+brew install slack
+brew install jq
+brew install git-extras
+brew install --cask wezterm
+brew install fantastical
+brew install direnv
+brew install starship
+brew install synology-drive
+brew install rcm
+brew install antigen
+brew install lua
+brew install jq
+brew install koekeishiya/formulae/yabai
+brew install koekeishiya/formulae/skhd
+brew install visual-studio-code
+brew install nvm
+brew install tig
+brew install borders
+brew install cleanshot
+brew install spotify
+brew install todoist
+# https://github.com/creimers/heic-to-jpg
+brew install imagemagick
+python3 -m pip install heic-to-jpg
+```
+
 ## Synology
 
 ```sh
-brew install homebrew/cask-drivers/synology-drive
+brew install synology-drive
 ```
 
 Need to sync `Store`
@@ -162,9 +195,11 @@ I've always installed the `otf` ones but `ttf` will also work. Open the folder a
 # Dotfiles download
 mkdir ~/Code
 cd ~/Code
+mkdir personal
+cd personal
 git clone git@github.com:rjhilgefort/dotfiles-2020.git
 cd ~
-ln -s ~/Code/dotfiles-2020 ~/.dotfiles
+ln -s ~/Code/personal/dotfiles-2020 ~/.dotfiles
 
 # RCM
 brew install rcm
@@ -187,6 +222,7 @@ https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 # Disable SIP
 
 brew install jq
+# install "borders", see yabairc
 brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
 
@@ -196,9 +232,9 @@ sudo nvram boot-args=-arm64e_preview_abi
 sudo yabai --install-sa
 sudo yabai --load-sa
 
-brew services start yabai && brew services start skhd
+yabai --start-service && skhd --start-service
 # or
-brew services restart yabai && brew services restart skhd
+yabai --restart-service && skhd --restart-service
 ```
 
 ### VSCode
@@ -273,7 +309,11 @@ npm install
 npm run build
 ```
 
-Then setup your shortcuts and hotkeys (b, ba)
+- Import the extension in Raycast
+- Select the root folder that you cloned (not some build directory)
+- Add GH token (1Pass)
+- Add Gist id: `98117c3e24c9c0ca3152eb682eb12926`
+- Then setup your shortcuts and hotkeys (b, ba)
 
 ## Cleanshot
 

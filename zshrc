@@ -12,7 +12,7 @@ antigen bundle compleat
 antigen bundle npm
 antigen bundle vi-mode
 antigen bundle git-extras
-antigen bundle docker
+antigen bundle "greymd/docker-zsh-completion" # antigen bundle docker # Error: Completions not found
 antigen bundle skywind3000/z.lua # https://github.com/skywind3000/z.lua
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions

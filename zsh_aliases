@@ -12,9 +12,12 @@ alias display-manager-restart='sudo systemctl restart lightdm'
 # tig
 alias t="tig status"
 
-### keyboard disablers
-alias kbd-disable="kbd-internal-disable"
-alias kbd-enable="kbd-internal-enable"
+# keyboard disablers
+# alias kbd-disable="kbd-internal-disable"
+# alias kbd-enable="kbd-internal-enable"
+
+# yabai / skhd
+alias yabai-restart="yabai --restart-service && skhd --restart-service"
 
 # emacs
 alias emacs-term="emacs -nw"
@@ -83,6 +86,12 @@ alias pm='pm2'
 # gitconfig switching
 alias git-whoami='echo $(git config user.email)'
 
+# Editor ApplePressAndHoldEnabled
+alias code-press-and-hold='defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false'
+cursor-press-and-hold() {
+  defaults write "$(osascript -e 'id of app "Cursor"')" ApplePressAndHoldEnabled -bool false
+}
+
 # https://cht.sh
 cheat() {
   curl cht.sh/$1
@@ -103,8 +112,15 @@ alias weather="curl wttr.in/Evergreen+Colorado\?u"
 alias weather-v2="curl v2.wttr.in/Evergreen+Colorado\?u"
 alias weather-v3="curl v3.wttr.in/Evergreen+Colorado\?u"
 
+################################################################################
+# fzf
+# https://github.com/junegunn/fzf/wiki/examples
+################################################################################
+
+
+################################################################################
 # Splunk K8
-#####################################################
+################################################################################
 alias incbot-db-backup="rm -f fetchedDatabase.json; kubectl get pods --namespace incident-response-bot | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl exec -n incident-response-bot {} -- cat /data/pseudoDatabase.json > fetchedDatabase.json && tail fetchedDatabase.json"
 alias incbot-db-backup-backup="rm -f fetchedDatabase-backup.json; kubectl get pods --namespace incident-response-bot | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl exec -n incident-response-bot {} -- cat /data/pseudoDatabase_backup.json > fetchedDatabase-backup.json && tail fetchedDatabase-backup.json"
 alias incbot-test-db-backup="rm -f fetchedDatabase-test.json; kubectl get pods --namespace incident-response-bot-test | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl exec -n incident-response-bot-test {} -- cat /data/pseudoDatabase.json > fetchedDatabase-test.json && tail fetchedDatabase-test.json"
@@ -114,8 +130,3 @@ alias incbot-test-logs="kubectl get pods --namespace incident-response-bot-test 
 # alias spur-bot-stage-logs="kubectl get pods --namespace spur-bot-stage | sed -ne 's/\(spur-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n spur-bot-stage -c spur-bot -f"
 alias spur-bot-logs="kubectl --namespace spur-bot logs -l app=spur-bot --tail=10000 -f"
 alias spur-bot-stage-logs="kubectl --namespace spur-bot-stage logs -l app=spur-bot --tail=10000 -f"
-
-# Origin
-#####################################################
-alias origin-aws-postgres-session="aws ssm start-session --profile=origin-source-development --region us-west-1 --target i-0d62c9487e0fdc39f --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host=\"main-postgres12.cluster-c9268pfktqlm.us-west-1.rds.amazonaws.com\",portNumber=\"5432\",localPortNumber=\"5433\""
-alias ssh-origin-bastion="ssh -A -i ~/.ssh/id_rsa ubuntu@ec2-54-183-30-183.us-west-1.compute.amazonaws.com"

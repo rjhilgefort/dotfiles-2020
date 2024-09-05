@@ -38,6 +38,7 @@ path+=($HOME'/.yarn/bin')
 path+=($HOME'/.config/yarn/global/node_modules/.bin')
 path+=($HOME'/Library/Python/3.8/bin')
 path+=($HOME'/Library/Python/3.9/bin')
+path+=($HOME'/.local/bin')
 path+=('/opt/homebrew/opt/libpq/bin')
 export PATH
 

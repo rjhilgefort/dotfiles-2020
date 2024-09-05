@@ -1,3 +1,9 @@
+# Problems? Check out:
+# cat /tmp/yabai_$USER.err.log
+# cat /tmp/yabai_$USER.out.log
+# cat /tmp/skhd_$USER.err.log
+# cat /tmp/skhd_$USER.out.log
+
 # the scripting-addition must be loaded manually if
 # you are running yabai on macOS Big Sur. Uncomment
 # the following line to have the injection performed
@@ -6,8 +12,8 @@
 # for this to work you must configure sudo such that
 # it will be able to run the command without password
 
-sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
 
 # Fix clicking on hover
 defaults write com.apple.finder CreateDesktop true
@@ -62,6 +68,7 @@ yabai -m space 7 --label "Temp"
 
 yabai -m rule --add app="WezTerm" space=1
 yabai -m rule --add app="Code" space=1
+yabai -m rule --add app="Cursor" space=1
 yabai -m rule --add app="Firefox" space=2
 yabai -m rule --add app="Google Chrome" space=2
 yabai -m rule --add app="Arc" space=2
