@@ -41,7 +41,7 @@ disabled = true
 [custom.gitwhoami]
 disabled = false
 format = "[$symbol $output]($style) "
-symbol = "☺"
+# symbol = "🤙"
 command = "git config user.profile"   # shows output of command
 when = "exit 0"
 style = "#d371f7"
