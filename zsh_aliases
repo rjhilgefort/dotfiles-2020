@@ -83,6 +83,9 @@ alias r='ranger'
 # pm2
 alias pm='pm2'
 
+# Code editor (Cursor)
+alias c="cursor"
+
 # gitconfig switching
 alias git-whoami='echo $(git config user.email)'
 
