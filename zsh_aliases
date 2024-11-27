@@ -12,7 +12,7 @@ alias display-manager-restart='sudo systemctl restart lightdm'
 # tig
 alias t="tig status"
 
-# keyboard disablers
+# keyboard disabler
 # alias kbd-disable="kbd-internal-disable"
 # alias kbd-enable="kbd-internal-enable"
 
