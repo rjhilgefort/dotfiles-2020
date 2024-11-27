@@ -54,6 +54,11 @@ gac () {
     git add -A
     git commit -m "$1"
 }
+gacp () {
+    git add -A
+    git commit -m "$1"
+    git push
+}
 
 # Homebrew
 alias b="brew"
