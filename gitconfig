@@ -102,12 +102,12 @@
 	contributors = shortlog --summary --numbered
 
 	# Merge trunks
-	merge-develop = !git fetch -p && git merge origin/develop
-	md = !git fetch -p && git merge origin/develop
-	merge-development = !git fetch -p && git merge origin/development
-	mdm = !git fetch -p && git merge origin/development
+	merge-dev = !git fetch -p && git merge origin/dev
+	md = !git fetch -p && git merge origin/dev
+	merge-main = !git fetch -p && git merge origin/main
+	mm = !git fetch -p && git merge origin/main
 	merge-master = !git fetch -p && git merge origin/master
-	mm = !git fetch -p && git merge origin/master
+	ma = !git fetch -p && git merge origin/master
 
 [apply]
 	# Detect whitespace errors when applying a patch

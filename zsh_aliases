@@ -47,7 +47,13 @@ alias xclip="xclip -selection c"
 
 # General
 alias cl="clear"
+
+# Git
 alias g="git"
+gac () {
+    git add -A
+    git commit -m "$1"
+}
 
 # Homebrew
 alias b="brew"
