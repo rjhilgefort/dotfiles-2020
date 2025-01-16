@@ -41,4 +41,3 @@ path+=($HOME'/Library/Python/3.9/bin')
 path+=($HOME'/.local/bin')
 path+=('/opt/homebrew/opt/libpq/bin')
 export PATH
-
