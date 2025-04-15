@@ -1,0 +1,3 @@
+theme = dark:snazzy soft,light:catppuccin-latte
+keybind = "ctrl+f=write_scrollback_file:open"
+keybind = "cmd+f=write_scrollback_file:open"
