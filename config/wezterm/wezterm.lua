@@ -64,7 +64,7 @@ tabline.setup({
     -- tab_inactive = { 'index', { 'process', padding = { left = 0, right = 1 } } },
     tabline_x = { ' ' },
     tabline_y = { ' ', 'datetime' },
-    tabline_z = { ' ' },
+    tabline_z = { 'domain' },
     -- tabline_x = { 'ram', 'cpu' },
     -- tabline_y = { 'datetime', 'battery' },
     -- tabline_z = { 'domain' },
