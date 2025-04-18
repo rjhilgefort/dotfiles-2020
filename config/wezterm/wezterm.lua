@@ -30,8 +30,8 @@ tabline.setup({
     -- },
   },
   sections = {
-    tabline_a = { 'mode' },
-    tabline_b = { 'workspace' },
+    tabline_a = { ' ' },
+    tabline_b = { ' ' },
     tabline_c = { ' ' },
     tab_active = {
       'index',
@@ -41,9 +41,12 @@ tabline.setup({
       { 'zoomed', padding = 0 },
     },
     tab_inactive = { 'index', { 'process', padding = { left = 0, right = 1 } } },
-    tabline_x = { 'ram', 'cpu' },
-    tabline_y = { 'datetime', 'battery' },
-    tabline_z = { 'domain' },
+    tabline_x = { ' ' },
+    tabline_y = { ' ', 'datetime' },
+    tabline_z = { ' ' },
+    -- tabline_x = { 'ram', 'cpu' },
+    -- tabline_y = { 'datetime', 'battery' },
+    -- tabline_z = { 'domain' },
   },
 })
 tabline.apply_to_config(config)
