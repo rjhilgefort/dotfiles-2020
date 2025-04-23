@@ -2,12 +2,7 @@
 alt - f : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle zoom-parent
 
-# toggle sticky(+float), topmost, picture-in-picture
-shift + alt + ctrl - f : yabai -m window --toggle sticky;\
-                         yabai -m window --toggle topmost;\
-                         yabai -m window --toggle pip
-
-# Change tiling padding
+# Change tiling padding or positions
 alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt - z : yabai -m space --rotate 90
 alt - x : yabai -m space --mirror y-axis
@@ -63,15 +58,6 @@ alt - u : yabai -m space --focus 7
 alt - i : yabai -m space --focus 8
 alt - o : yabai -m space --focus 9
 
-# Resize windows
-shift + alt + ctrl - h : yabai -m window west --resize right:-100:0 2> /dev/null || yabai -m window --resize right:-100:0
-shift + alt + ctrl - j : yabai -m window north --resize bottom:0:100 2> /dev/null || yabai -m window --resize bottom:0:100
-shift + alt + ctrl - k : yabai -m window south --resize top:0:-100 2> /dev/null || yabai -m window --resize top:0:-100
-shift + alt + ctrl - l : yabai -m window east --resize left:100:0 2> /dev/null || yabai -m window --resize left:100:0
-
-# change focus between tiling / floating windows
-# shift + alt - space : chunkc tiling::window --toggle float
-
 # send window to desktop and follow focus
 shift + alt - tab : yabai -m window --space recent; yabai -m space --focus recent 
 shift + alt - p : yabai -m window --space prev; yabai -m space --focus prev
@@ -96,3 +82,16 @@ shift + alt - y : yabai -m window --space 6; yabai -m space --focus 6
 shift + alt - u : yabai -m window --space 7; yabai -m space --focus 7
 shift + alt - i : yabai -m window --space 8; yabai -m space --focus 8
 shift + alt - o : yabai -m window --space 9; yabai -m space --focus 9
+
+# Resize windows
+shift + alt + ctrl - h : yabai -m window west --resize right:-100:0 2> /dev/null || yabai -m window --resize right:-100:0
+shift + alt + ctrl - j : yabai -m window north --resize bottom:0:100 2> /dev/null || yabai -m window --resize bottom:0:100
+shift + alt + ctrl - k : yabai -m window south --resize top:0:-100 2> /dev/null || yabai -m window --resize top:0:-100
+shift + alt + ctrl - l : yabai -m window east --resize left:100:0 2> /dev/null || yabai -m window --resize left:100:0
+
+# toggle sticky(+float), topmost, picture-in-picture
+shift + alt + ctrl - f : yabai -m window --toggle sticky;\
+                         yabai -m window --toggle topmost;\
+                         yabai -m window --toggle pip
+
+shift + alt + ctrl - b : pkill borders; borders active_color=0xFF4CBB67 inactive_color=0xff494d64 width=9.0 &
