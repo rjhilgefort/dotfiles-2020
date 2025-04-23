@@ -48,17 +48,8 @@ alias xclip="xclip -selection c"
 # General
 alias cl="clear"
 
-# Git
+# Git - See gitconfig for more aliases
 alias g="git"
-gac () {
-    git add -A
-    git commit -m "$1"
-}
-gacp () {
-    git add -A
-    git commit -m "$1"
-    git push
-}
 
 # Homebrew
 alias b="brew"
