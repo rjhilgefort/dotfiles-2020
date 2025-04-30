@@ -121,7 +121,7 @@ alias weather-v3="curl v3.wttr.in/Evergreen+Colorado\?u"
 # fzf
 # https://github.com/junegunn/fzf/wiki/examples
 ################################################################################
-
+# TODO
 
 ################################################################################
 # Splunk K8
@@ -135,3 +135,11 @@ alias incbot-test-logs="kubectl get pods --namespace incident-response-bot-test 
 alias spur-bot-logs="kubectl --namespace spur-bot logs -l app=spur-bot --tail=10000 -f"
 alias spur-bot-stage-logs="kubectl --namespace spur-bot-stage logs -l app=spur-bot --tail=10000 -f"
 # alias spur-bot-stage-logs="kubectl get pods --namespace spur-bot-stage | sed -ne 's/\(spur-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl logs {} -n spur-bot-stage -c spur-bot -f"
+
+################################################################################
+# Bull Repl 
+################################################################################
+alias bull-repl-creator-analytics-webhook-upsert-stats="bull-repl connect --host localhost --port 6379 creator-analytics-webhook-upsert --exec stats"
+alias bull-repl-affiliate-link-event-webhook-extract="bull-repl connect --host localhost --port 6379 affiliate-link-event-webhook-extract --exec stats"
+alias bull-repl-affiliate-link-webhook-load="bull-repl connect --host localhost --port 6379 affiliate-link-webhook-load --exec stats"
+alias bull-repl-all-stats="bull-repl-creator-analytics-webhook-upsert-stats; bull-repl-affiliate-link-event-webhook-extract; bull-repl-affiliate-link-webhook-load"
