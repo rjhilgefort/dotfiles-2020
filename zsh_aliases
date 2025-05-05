@@ -57,7 +57,7 @@ alias bs="brew search"
 alias bi="brew install"
 
 # NPM / Yarn
-alias n="npm"
+alias n="npm run"
 alias ni="npm install"
 alias nis="npm install --save"
 alias nisd="npm install --save-dev"
@@ -139,7 +139,10 @@ alias spur-bot-stage-logs="kubectl --namespace spur-bot-stage logs -l app=spur-b
 ################################################################################
 # Bull Repl 
 ################################################################################
-alias bull-repl-creator-analytics-webhook-upsert-stats="bull-repl connect --host localhost --port 6379 creator-analytics-webhook-upsert --exec stats"
-alias bull-repl-affiliate-link-event-webhook-extract="bull-repl connect --host localhost --port 6379 affiliate-link-event-webhook-extract --exec stats"
-alias bull-repl-affiliate-link-webhook-load="bull-repl connect --host localhost --port 6379 affiliate-link-webhook-load --exec stats"
-alias bull-repl-all-stats="bull-repl-creator-analytics-webhook-upsert-stats; bull-repl-affiliate-link-event-webhook-extract; bull-repl-affiliate-link-webhook-load"
+alias bull-repl-creator-analytics-webhook-upsert="bull-repl connect --host localhost --port 6379 creator-analytics-webhook-upsert"
+alias bull-repl-creator-analytics-webhook-upsert-stats="bull-repl-creator-analytics-webhook-upsert --exec stats"
+alias bull-repl-affiliate-link-event-webhook-extract="bull-repl connect --host localhost --port 6379 affiliate-link-event-webhook-extract"
+alias bull-repl-affiliate-link-event-webhook-extract-stats="bull-repl-affiliate-link-event-webhook-extract --exec stats"
+alias bull-repl-affiliate-link-webhook-load="bull-repl connect --host localhost --port 6379 affiliate-link-webhook-load"
+alias bull-repl-affiliate-link-webhook-load-stats="bull-repl-affiliate-link-webhook-load --exec stats"
+alias bull-repl-all-stats="bull-repl-creator-analytics-webhook-upsert-stats; bull-repl-affiliate-link-event-webhook-extract-stats; bull-repl-affiliate-link-webhook-load-stats"
