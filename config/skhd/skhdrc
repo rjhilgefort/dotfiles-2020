@@ -6,6 +6,7 @@ shift + alt - f : yabai -m window --toggle zoom-parent
 alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt - z : yabai -m space --rotate 90
 alt - x : yabai -m space --mirror y-axis
+alt - c : yabai -m space --rotate 90; yabai -m space --rotate 90;
 
 # change layout of desktop
 alt - s : yabai -m space --layout stack 
