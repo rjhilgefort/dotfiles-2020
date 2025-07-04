@@ -12,17 +12,44 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- local theme = "Earthsong"
-local theme = "Snazzy"
--- local theme = "Tokyo Night (Gogh)"
-
-config.color_scheme = theme
 config.window_background_opacity = 0.80
 config.tab_bar_at_bottom = true
 config.font_size = 14.0
 config.font = wezterm.font_with_fallback({ "Dank Mono" })
 config.enable_scroll_bar = true
 config.scrollback_lines = 14000
+
+-- wezterm.gui is not available to the mux server, so take care to
+-- do something reasonable when this config is evaluated by the mux
+function get_appearance()
+  if wezterm.gui then
+    return wezterm.gui.get_appearance()
+  end
+  return 'Dark'
+end
+
+function scheme_for_appearance(appearance)
+  if appearance:find 'Dark' then
+    return 'Snazzy'
+  else
+    return 'Material'
+  end
+end
+
+function scheme_for_appearance_tabline(appearance)
+  if appearance:find 'Dark' then
+    return 'Tokyo Night (Gogh)'
+  else
+    return 'Material'
+  end
+end
+
+config.color_scheme = scheme_for_appearance(get_appearance()),
+
+-- local theme = "Earthsong"
+-- local theme = "Snazzy"
+-- local theme = "Tokyo Night (Gogh)"
+-- config.color_scheme = theme
 
 -- https://github.com/michaelbrusegard/tabline.wez
 tabline.setup({
