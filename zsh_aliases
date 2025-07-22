@@ -79,6 +79,10 @@ d-exec() { docker exec -it $1 bash; }
 # docker-compose
 alias dc='docker-compose'
 
+alias p='pulumi'
+alias pu='pulumi up'
+alias pr='pulumi refresh'
+
 # ranger
 alias r='ranger'
 

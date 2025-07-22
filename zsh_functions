@@ -20,8 +20,22 @@ if test -z $CRONTABCMD; then
   $CRONTABCMD ~/.crontab
 fi
 
+
 ################################################################################
-# js-run - Runs yarn or npm install by detecting the lock file type
+# js-run - Runs package.json scripts and detects yarn or npm
+# js-run() {
+#   if [[ -f "./package-lock.json" && -f "./yarn.lock" ]]; then
+#     echo "❌ Both npm and yarn detected, preferring yarn"
+#     yarn "$@"
+#   elif [[ -f "./yarn.lock" ]]; then
+#     yarn "$@"
+#   elif [[ -f "./package-lock.json" ]]; then
+#     npm run "$@"
+#   fi
+# }
+
+################################################################################
+# js-install - Runs yarn or npm install by detecting the lock file type
 js-install() {
   if [[ -f "./package-lock.json" && -f "./yarn.lock" ]]; then
     echo "❌ Both npm and yarn detected, preferring yarn"
@@ -32,18 +46,44 @@ js-install() {
     npm install
   fi
 }
+
 alias ji="js-install"
 
 ################################################################################
 # js-run - Runs package.json scripts and detects yarn or npm
+# Look for `.git` in folder before looking for lockfile. 
+# Traverse up the directory tree until a `.git` is found and then look for lockfile.
 js-run() {
-  if [[ -f "./package-lock.json" && -f "./yarn.lock" ]]; then
+  local current_dir="$PWD"
+  local git_root=""
+  
+  # Traverse up until we find .git directory or reach root
+  while [[ "$current_dir" != "" && ! -d "$current_dir/.git" ]]; do
+    current_dir=${current_dir%/*}
+  done
+  
+  # If we found a git directory, use it as our root to check for lockfiles
+  if [[ -d "$current_dir/.git" ]]; then
+    git_root="$current_dir"
+  else
+    # If no git directory found, use current directory
+    git_root="$PWD"
+  fi
+  
+  # Check for lockfiles in the determined root directory
+  if [[ -f "$git_root/package-lock.json" && -f "$git_root/yarn.lock" ]]; then
     echo "❌ Both npm and yarn detected, preferring yarn"
     yarn "$@"
-  elif [[ -f "./yarn.lock" ]]; then
+  elif [[ -f "$git_root/yarn.lock" ]]; then
     yarn "$@"
-  elif [[ -f "./package-lock.json" ]]; then
+  elif [[ -f "$git_root/package-lock.json" ]]; then
     npm run "$@"
+  elif [[ -f "$git_root/pnpm-lock.yaml" ]]; then
+    pnpm run "$@"
+  else
+    echo "No package manager lockfile found in repository root: $git_root"
+    return 1
   fi
 }
+
 alias j="js-run"
