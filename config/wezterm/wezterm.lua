@@ -44,7 +44,7 @@ function scheme_for_appearance_tabline(appearance)
   end
 end
 
-config.color_scheme = scheme_for_appearance(get_appearance()),
+config.color_scheme = scheme_for_appearance(get_appearance())
 
 -- local theme = "Earthsong"
 -- local theme = "Snazzy"
