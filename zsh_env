@@ -30,6 +30,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 export AWS_DEFAULT_REGION=us-west-1
+export SPLUNK_HOME=/Applications/Splunk
 export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/application_default_credentials.json
 
 # Path updates
