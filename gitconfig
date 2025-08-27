@@ -22,10 +22,13 @@
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 	lg = !"git lg1"
 
-	# Add it all
+ # add, commit, push aliases
 	aa = add -A
 	ac = "!f() { git add -A && git commit -m \"$1\"; }; f"
 	acp = "!f() { git add -A && git commit -m \"$1\" && git push; }; f"
+	# Commit all changes
+	# ca = !"git add -A && git commit -av"
+
 
 	# View the current working tree status using the short format
 	# s = status -s
@@ -43,9 +46,6 @@
 
 	# Clone a repository including all submodules
 	c = clone --recursive
-
-	# Commit all changes
-	ca = !"git add -A && git commit -av"
 
 	# Switch to a branch, creating it if necessary
 	co = checkout
@@ -70,11 +70,12 @@
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 
 	# Pull and Push
+	p = !"git push"
 	pp = !"git pull; git push"
 
 	# Stash helpers
 	sl = stash list
-	ss = !git add -A && git stash save
+	ss = "!git add -A && git stash save"
 	sa = "!sh -c 'git stash apply stash@{$1}' -"
 	sp = "!sh -c 'git stash pop stash@{$1}' -"
 	sd = "!sh -c 'git stash drop stash@{$1}' -"
@@ -104,12 +105,16 @@
 	contributors = shortlog --summary --numbered
 
 	# Merge trunks
-	merge-dev = !git fetch -p && git merge origin/dev
-	md = !git fetch -p && git merge origin/dev
-	merge-main = !git fetch -p && git merge origin/main
-	mm = !git fetch -p && git merge origin/main
-	merge-master = !git fetch -p && git merge origin/master
-	ma = !git fetch -p && git merge origin/master
+	merge-dev = "!git fetch -p && git merge origin/dev"
+	md = "!git fetch -p && git merge origin/dev"
+	merge-main = "!git fetch -p && git merge origin/main"
+	mm = "!git fetch -p && git merge origin/main"
+	merge-master = "!git fetch -p && git merge origin/master"
+	ma = "!git fetch -p && git merge origin/master"
+
+	# reset hard
+	rh = "!git reset --hard"
+	rhc = "!git reset --hard && git clean -fd"
 
 [apply]
 	# Detect whitespace errors when applying a patch
