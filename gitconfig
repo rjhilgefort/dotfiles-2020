@@ -24,8 +24,8 @@
 
  # add, commit, push aliases
 	aa = add -A
-	ac = "!f() { git add -A && git commit -m \"$1\"; }; f"
-	acp = "!f() { git add -A && git commit -m \"$1\" && git push; }; f"
+	ac = "!f() { command -v pbcopy >/dev/null 2>&1 && printf %s \"$1\" | pbcopy; git add -A && git commit -m \"$1\"; }; f"
+	acp = "!f() { command -v pbcopy >/dev/null 2>&1 && printf %s \"$1\" | pbcopy; git add -A && git commit -m \"$1\" && git push; }; f"
 	# Commit all changes
 	# ca = !"git add -A && git commit -av"
 
