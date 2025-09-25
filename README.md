@@ -214,6 +214,19 @@ cp -a /opt/homebrew/share/antigen/antigen.zsh ~/.bin/
 # Open a new shell
 ```
 
+To add a new `config` directory and link it to the home directory:
+
+```sh
+cd ~/Code/personal/dotfiles-2020
+cd config
+# add the new config directory
+mkrc [directory]
+cd ~/
+rcup -v
+```
+
+More info: https://thoughtbot.github.io/rcm/rcm.7.html
+
 ### Yabai
 
 https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
