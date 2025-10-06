@@ -31,7 +31,7 @@ alias appsoninternet='sudo lsof -P -i -n | cut -f 1 -d " " | uniq'
 # list what ports are currently open
 alias listopenports='sudo lsof -i -P | grep -i "listen"'
 function killopenport {
-    kill $(lsof -ti tcp:$1)
+  kill $(lsof -ti tcp:$1)
 }
 
 alias timezone-mountain="timedatectl set-timezone America/Denver"
@@ -89,8 +89,9 @@ alias r='ranger'
 # pm2
 alias pm='pm2'
 
-# Code editor (Cursor)
+# Code editors
 alias c="cursor"
+alias nv="nvim"
 
 # gitconfig switching
 alias git-whoami='echo $(git config user.email)'
