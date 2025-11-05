@@ -1,0 +1,19 @@
+{
+  "alwaysThinkingEnabled": true,
+  "permissions": {
+    "allow": [
+      "Bash(terminal-notifier)",
+      "Read(~/.zshrc)",
+      "Bash(git log)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git add)",
+      "Bash(git push)",
+      "Bash(git pull)",
+      "Bash(yarn)",
+      "Bash(npm)",
+      "Bash(pnpm)",
+      "Bash(bun)"
+    ]
+  }
+}
