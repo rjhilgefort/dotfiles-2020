@@ -77,7 +77,7 @@ alias d-network-remove-all='docker network rm $(docker network ls -q)'
 d-exec() { docker exec -it $1 bash; }
 
 # docker-compose
-alias dc='docker-compose'
+alias dc='docker compose'
 
 alias p='pulumi'
 alias pu='pulumi up'
