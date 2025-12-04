@@ -1,5 +1,4 @@
 {
-  "alwaysThinkingEnabled": true,
   "permissions": {
     "allow": [
       "Bash(terminal-notifier)",
@@ -12,8 +11,9 @@
       "Bash(git pull)",
       "Bash(yarn)",
       "Bash(npm)",
-      "Bash(pnpm)",
-      "Bash(bun)"
+      "Bash(test)"
     ]
-  }
+  },
+  "alwaysThinkingEnabled": true,
+  "model": "claude-opus-4-5-20251101"
 }
