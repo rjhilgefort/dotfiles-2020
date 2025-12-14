@@ -1,4 +1,7 @@
 {
+  "env": {
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
+  },
   "permissions": {
     "allow": [
       "Bash(terminal-notifier)",
@@ -14,6 +17,6 @@
       "Bash(test)"
     ]
   },
-  "alwaysThinkingEnabled": true,
-  "model": "claude-opus-4-5-20251101"
+  "model": "claude-opus-4-5-20251101",
+  "alwaysThinkingEnabled": true
 }
