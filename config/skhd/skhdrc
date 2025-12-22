@@ -13,20 +13,19 @@ alt - s : yabai -m space --layout stack
 alt - d : yabai -m space --layout bsp
 # alt - g : yabai -m space --layout float
 
-# change focus (bsp or stack)
-# TODO: When in stack, if at most previous, wrap around to last
+# change focus (bsp or stack, with stack wrapping)
 alt - h : [[ $(yabai -m query --spaces --space | jq -re '.type') = "bsp" ]]\
           && yabai -m window --focus west\
-          || yabai -m window --focus stack.prev
+          || (yabai -m window --focus stack.prev || yabai -m window --focus stack.last)
 alt - j : [[ $(yabai -m query --spaces --space | jq -re '.type') = "bsp" ]]\
           && yabai -m window --focus south\
-          || yabai -m window --focus stack.prev
+          || (yabai -m window --focus stack.prev || yabai -m window --focus stack.last)
 alt - k : [[ $(yabai -m query --spaces --space | jq -re '.type') = "bsp" ]]\
           && yabai -m window --focus north\
-          || yabai -m window --focus stack.next
+          || (yabai -m window --focus stack.next || yabai -m window --focus stack.first)
 alt - l : [[ $(yabai -m query --spaces --space | jq -re '.type') = "bsp" ]]\
           && yabai -m window --focus east\
-          || yabai -m window --focus stack.next
+          || (yabai -m window --focus stack.next || yabai -m window --focus stack.first)
 
 # move focused window
 shift + alt - h : yabai -m window --warp west
@@ -96,3 +95,6 @@ shift + alt + ctrl - f : yabai -m window --toggle sticky;\
                          yabai -m window --toggle pip
 
 shift + alt + ctrl - b : pkill borders; borders active_color=0xFF4CBB67 inactive_color=0xff494d64 width=9.0 &
+
+# copy the focused window's title to the clipboard
+# alt - m : yabai -m query --windows --window | jq -r '.title' | pbcopy

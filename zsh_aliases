@@ -55,6 +55,11 @@ alias g="git"
 alias b="brew"
 alias bs="brew search"
 alias bi="brew install"
+alias bud="brew update"
+bug() {
+  brew upgrade "$@"
+}
+alias bugi='outdated=$(brew outdated); [[ -n "$outdated" ]] && fzf --multi <<< "$outdated" | xargs brew upgrade'
 
 # NPM / Yarn
 alias n="npm run"
@@ -129,7 +134,7 @@ alias weather-v3="curl v3.wttr.in/Evergreen+Colorado\?u"
 # TODO
 
 ################################################################################
-# Splunk K8
+# Kubernetes
 ################################################################################
 alias incbot-db-backup="rm -f fetchedDatabase.json; kubectl get pods --namespace incident-response-bot | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl exec -n incident-response-bot {} -- cat /data/pseudoDatabase.json > fetchedDatabase.json && tail fetchedDatabase.json"
 alias incbot-db-backup-backup="rm -f fetchedDatabase-backup.json; kubectl get pods --namespace incident-response-bot | sed -ne 's/\(incident-response-bot-[0-9a-zA-Z-]*\).*/\1/p' | xargs -I{} kubectl exec -n incident-response-bot {} -- cat /data/pseudoDatabase_backup.json > fetchedDatabase-backup.json && tail fetchedDatabase-backup.json"

@@ -1,4 +1,10 @@
 {
+<<<<<<< HEAD
+=======
+  "env": {
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
+  },
+>>>>>>> 36555430b9f524be5114ef23da2095359e72d553
   "permissions": {
     "allow": [
       "Bash(terminal-notifier)",
@@ -11,10 +17,10 @@
       "Bash(git pull)",
       "Bash(yarn)",
       "Bash(npm)",
-      "Bash(pnpm)",
-      "Bash(bun)"
+      "Bash(test)"
     ]
   },
+<<<<<<< HEAD
   "alwaysThinkingEnabled": true,
   "model": "claude-opus-4-5-20251101",
   "mcpServers": {
@@ -23,4 +29,8 @@
       "args": ["-y", "@niklaserik/effect-mcp"]
     }
   }
+=======
+  "model": "claude-opus-4-5-20251101",
+  "alwaysThinkingEnabled": true
+>>>>>>> 36555430b9f524be5114ef23da2095359e72d553
 }
