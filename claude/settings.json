@@ -1,5 +1,4 @@
 {
-  "alwaysThinkingEnabled": true,
   "permissions": {
     "allow": [
       "Bash(terminal-notifier)",
@@ -15,5 +14,13 @@
       "Bash(pnpm)",
       "Bash(bun)"
     ]
+  },
+  "alwaysThinkingEnabled": true,
+  "model": "claude-opus-4-5-20251101",
+  "mcpServers": {
+    "effect-mcp": {
+      "command": "npx",
+      "args": ["-y", "@niklaserik/effect-mcp"]
+    }
   }
 }
