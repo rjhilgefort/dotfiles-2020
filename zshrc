@@ -19,7 +19,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle rjhilgefort/history-search-multi-word
-export NVM_LAZY_LOAD=true
+export NVM_LAZY_LOAD=false
 export NVM_AUTO_USE=true
 antigen bundle lukechilds/zsh-nvm
 
