@@ -4,17 +4,105 @@
   },
   "permissions": {
     "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "TodoWrite",
+      "Task",
       "Bash(terminal-notifier:*)",
-      "Read(~/.zshrc)",
-      "Bash(git log)",
-      "Bash(git status)",
-      "Bash(git diff)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(file:*)",
+      "Bash(find:*)",
+      "Bash(fd:*)",
+      "Bash(tree:*)",
+      "Bash(du:*)",
+      "Bash(df:*)",
+      "Bash(which:*)",
+      "Bash(whereis:*)",
+      "Bash(type:*)",
+      "Bash(realpath:*)",
+      "Bash(dirname:*)",
+      "Bash(basename:*)",
+      "Bash(pwd)",
+      "Bash(env)",
+      "Bash(printenv:*)",
+      "Bash(echo:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(rg:*)",
+      "Bash(ag:*)",
+      "Bash(grep:*)",
+      "Bash(diff:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote:*)",
+      "Bash(git show:*)",
+      "Bash(git stash list:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git config --get:*)",
       "Bash(git add)",
       "Bash(git push)",
       "Bash(git pull)",
-      "Bash(yarn)",
-      "Bash(npm)",
-      "Bash(test)"
+      "Bash(npm:*)",
+      "Bash(yarn:*)",
+      "Bash(pnpm:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(bun:*)",
+      "Bash(deno:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(pip list:*)",
+      "Bash(pip show:*)",
+      "Bash(docker ps:*)",
+      "Bash(docker images:*)",
+      "Bash(docker logs:*)",
+      "Bash(docker inspect:*)",
+      "Bash(gh:*)",
+      "Bash(jq:*)",
+      "Bash(yq:*)",
+      "Bash(test)",
+      "Bash(date:*)",
+      "Bash(uname:*)",
+      "Bash(man:*)",
+      "Bash(tldr:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)",
+      "Bash(su:*)"
+    ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -title 'Claude Code' -message 'Awaiting input'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -title 'Claude Code' -message 'Task complete'"
+          }
+        ]
+      }
     ]
   },
   "alwaysThinkingEnabled": true,

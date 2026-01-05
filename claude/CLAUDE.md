@@ -24,3 +24,8 @@ When writing typescript code, adhere to the following guidelines.
 - **do not** use `any`, `unknown`, or `never` types.
 - **do not** use `@ts-expect-error` or `@ts-ignore` comments.
 - **do not** use `as` type assertions.
+
+## Effect (TypeScript)
+
+- When writing Effect code, use the `effect-docs` MCP server to look up documentation.
+- Prefer composition with `pipe` over intermediate variables.

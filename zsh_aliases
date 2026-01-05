@@ -97,6 +97,8 @@ alias pm='pm2'
 # Code editors
 alias c="cursor"
 alias nv="nvim"
+alias vim-old="command vim"
+alias vim="nvim"
 
 # gitconfig switching
 alias git-whoami='echo $(git config user.email)'

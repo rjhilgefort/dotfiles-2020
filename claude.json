@@ -1,5 +1,5 @@
 {
-  "numStartups": 81,
+  "numStartups": 114,
   "installMethod": "unknown",
   "autoUpdates": true,
   "theme": "light",
@@ -7,37 +7,38 @@
   "customApiKeyResponses": {
     "approved": [
       "PKk0aMxFpbQ-rKwEYgAA",
-      "2STZeq54ypQ-KQpjowAA"
+      "2STZeq54ypQ-KQpjowAA",
+      "Tdr3Yo6vgIw-xdHLkgAA"
     ],
     "rejected": []
   },
   "tipsHistory": {
     "new-user-warmup": 9,
-    "plan-mode-for-complex-tasks": 28,
-    "memory-command": 68,
-    "theme-command": 68,
-    "status-line": 56,
+    "plan-mode-for-complex-tasks": 87,
+    "memory-command": 101,
+    "theme-command": 110,
+    "status-line": 108,
     "prompt-queue": 9,
-    "enter-to-steer-in-relatime": 68,
-    "todo-list": 68,
+    "enter-to-steer-in-relatime": 110,
+    "todo-list": 111,
     "ide-upsell-external-terminal": 10,
-    "# for memory": 79,
-    "install-github-app": 79,
-    "drag-and-drop-images": 73,
-    "paste-images-mac": 73,
-    "double-esc-code-restore": 73,
-    "continue": 79,
-    "shift-tab": 79,
-    "image-paste": 68,
-    "tab-toggle-thinking": 80,
-    "ultrathink-keyword": 80,
-    "shift-enter": 73,
-    "custom-agents": 76,
-    "permissions": 81,
-    "custom-commands": 76,
-    "git-worktrees": 76
+    "# for memory": 113,
+    "install-github-app": 107,
+    "drag-and-drop-images": 108,
+    "paste-images-mac": 108,
+    "double-esc-code-restore": 106,
+    "continue": 107,
+    "shift-tab": 107,
+    "image-paste": 111,
+    "tab-toggle-thinking": 107,
+    "ultrathink-keyword": 107,
+    "shift-enter": 108,
+    "custom-agents": 108,
+    "permissions": 104,
+    "custom-commands": 108,
+    "git-worktrees": 107
   },
-  "promptQueueUseCount": 4,
+  "promptQueueUseCount": 8,
   "autoConnectIde": true,
   "cachedStatsigGates": {
     "tengu_migrate_ignore_patterns": false,
@@ -79,8 +80,19 @@
         "index.ts",
         "Footer.tsx"
       ],
-      "lastTotalWebSearchRequests": 6,
-      "exampleFilesGeneratedAt": 1766274042631
+      "lastTotalWebSearchRequests": 0,
+      "exampleFilesGeneratedAt": 1766274042631,
+      "lastCost": 0.35500500000000007,
+      "lastAPIDuration": 184801,
+      "lastToolDuration": 1257,
+      "lastDuration": 238186105,
+      "lastLinesAdded": 11,
+      "lastLinesRemoved": 8,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 4931,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "9d24f7fc-e0a7-4561-9a66-4a6629743637"
     },
     "/Users/robhilgefort/Code/personal/journal": {
       "allowedTools": [],
@@ -96,23 +108,23 @@
       "exampleFiles": [
         "db.json",
         "commit-entry.ts",
-        "determine-entry-music.ts",
         "handle-images.ts",
-        "topics.md"
+        "determine-entry-music.ts",
+        "search.ts"
       ],
-      "exampleFilesGeneratedAt": 1765648269398,
+      "exampleFilesGeneratedAt": 1766967131125,
       "lastTotalWebSearchRequests": 0,
-      "lastCost": 0.32842499999999997,
-      "lastAPIDuration": 116962,
-      "lastToolDuration": 2838,
-      "lastDuration": 26283370,
-      "lastLinesAdded": 9,
-      "lastLinesRemoved": 10,
+      "lastCost": 0.874665,
+      "lastAPIDuration": 236199,
+      "lastToolDuration": 4699,
+      "lastDuration": 77773799,
+      "lastLinesAdded": 316,
+      "lastLinesRemoved": 82,
       "lastTotalInputTokens": 0,
-      "lastTotalOutputTokens": 4585,
+      "lastTotalOutputTokens": 11889,
       "lastTotalCacheCreationInputTokens": 0,
       "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "b6c689a0-3f93-456a-ada3-4eb18eaa1ef0"
+      "lastSessionId": "e5dd305e-ad20-4977-aedb-f851edd72e73"
     },
     "/Users/robhilgefort/Code/mavely/mft-api-3": {
       "allowedTools": [],
@@ -204,19 +216,20 @@
         "deemixApp.ts",
         "index.ts"
       ],
-      "exampleFilesGeneratedAt": 1766336700481,
+      "exampleFilesGeneratedAt": 1767213722298,
       "lastTotalWebSearchRequests": 0,
-      "lastCost": 0.629465,
-      "lastAPIDuration": 238961,
-      "lastToolDuration": 26813,
-      "lastDuration": 7792996,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 1.1221500000000002,
+      "lastAPIDuration": 514710,
+      "lastToolDuration": 53937,
+      "lastDuration": 78353570,
+      "lastLinesAdded": 141,
+      "lastLinesRemoved": 32,
       "lastTotalInputTokens": 0,
-      "lastTotalOutputTokens": 10637,
+      "lastTotalOutputTokens": 15168,
       "lastTotalCacheCreationInputTokens": 0,
       "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "2a81b44a-bc6e-4357-a4f1-4dc782ed8c68"
+      "lastSessionId": "89bfa028-3dd0-4a0c-b44b-ecffe899e266"
     },
     "/Users/robhilgefort/Code/mavely/mft-api-1": {
       "allowedTools": [],
@@ -230,25 +243,25 @@
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "exampleFiles": [
+        "update-user.ts",
+        "do-signup.ts",
+        "context.ts",
         "link-social-identity.ts",
-        "proxy",
-        "webhooks",
-        "schema.graphql",
-        "prisma-utils"
+        "index.ts"
       ],
-      "exampleFilesGeneratedAt": 1765901388429,
+      "exampleFilesGeneratedAt": 1766521011045,
       "lastTotalWebSearchRequests": 0,
-      "lastCost": 0.002615,
-      "lastAPIDuration": 5875,
-      "lastToolDuration": 0,
-      "lastDuration": 7456,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
+      "lastCost": 11.369314999999995,
+      "lastAPIDuration": 2650351,
+      "lastToolDuration": 287493,
+      "lastDuration": 251617853,
+      "lastLinesAdded": 3439,
+      "lastLinesRemoved": 100,
       "lastTotalInputTokens": 0,
-      "lastTotalOutputTokens": 307,
+      "lastTotalOutputTokens": 151779,
       "lastTotalCacheCreationInputTokens": 0,
       "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "fdcae201-390c-4b9c-a5f2-f571bb5d6a24"
+      "lastSessionId": "1a71cbe1-d2a1-4f80-bfe5-dab046f3935f"
     },
     "/Users/robhilgefort/Code/personal/spotizerr": {
       "allowedTools": [],
@@ -279,22 +292,11 @@
         "zsh_aliases",
         "sxhkdrc",
         "yabairc",
-        "zshrc",
-        "wezterm.lua"
+        "wezterm.lua",
+        "weather.py"
       ],
-      "exampleFilesGeneratedAt": 1766333903559,
-      "lastTotalWebSearchRequests": 1,
-      "lastCost": 0.10657499999999999,
-      "lastAPIDuration": 41103,
-      "lastToolDuration": 22415,
-      "lastDuration": 204614,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 0,
-      "lastTotalOutputTokens": 1423,
-      "lastTotalCacheCreationInputTokens": 0,
-      "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "5809f7e6-e147-4d7d-b276-ba06db820af0"
+      "exampleFilesGeneratedAt": 1767628228112,
+      "lastTotalWebSearchRequests": 1
     },
     "/Users/robhilgefort/Downloads": {
       "allowedTools": [],
@@ -320,6 +322,31 @@
       "lastTotalCacheReadInputTokens": 0,
       "lastTotalWebSearchRequests": 1,
       "lastSessionId": "36aa4535-dedf-4986-a070-dfbd92df3789"
+    },
+    "/Users/robhilgefort": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [],
+      "lastTotalWebSearchRequests": 2,
+      "lastCost": 0.470275,
+      "lastAPIDuration": 143788,
+      "lastToolDuration": 59068,
+      "lastDuration": 1938185,
+      "lastLinesAdded": 95,
+      "lastLinesRemoved": 7,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 6173,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "62b65dd4-4acc-4452-bc4e-ec892e21a93d"
     }
   },
   "hasOpusPlanDefault": false,
@@ -332,7 +359,7 @@
     }
   },
   "fallbackAvailableWarningThreshold": 0.5,
-  "lastPlanModeUse": 1766274045289,
+  "lastPlanModeUse": 1767423103425,
   "feedbackSurveyState": {
     "lastShownTime": 1765648884288
   },
@@ -343,10 +370,19 @@
   "s1mNonSubscriberAccessCache": {
     "026326cb-1502-458e-a9a0-c3d62f17c15c": {
       "hasAccess": true,
-      "timestamp": 1766517650906
+      "timestamp": 1767628227155
     }
   },
   "mcpServers": {
+    "docker-mcp": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "mcp",
+        "gateway",
+        "run"
+      ]
+    },
     "effect-mcp": {
       "command": "npx",
       "args": [
@@ -383,6 +419,10 @@
     "linear-server": {
       "type": "http",
       "url": "https://mcp.linear.app/mcp"
+    },
+    "notion": {
+      "type": "http",
+      "url": "https://mcp.notion.com/mcp"
     },
     "context7": {
       "type": "stdio",
