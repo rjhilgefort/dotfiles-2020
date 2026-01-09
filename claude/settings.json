@@ -49,7 +49,6 @@
       "Bash(git rev-parse:*)",
       "Bash(git config --get:*)",
       "Bash(git add)",
-      "Bash(git push)",
       "Bash(git pull)",
       "Bash(npm:*)",
       "Bash(yarn:*)",

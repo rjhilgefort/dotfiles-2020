@@ -7,6 +7,7 @@
 ## Git Commits
 
 - Never add Co-Authored-By lines to commits
+- Always ask before committing or pushing
 
 ## Pull Requests
 
