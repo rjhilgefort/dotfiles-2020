@@ -74,11 +74,7 @@
       "Bash(man:*)",
       "Bash(tldr:*)"
     ],
-    "deny": [
-      "Bash(rm -rf:*)",
-      "Bash(sudo:*)",
-      "Bash(su:*)"
-    ]
+    "deny": ["Bash(rm -rf:*)", "Bash(sudo:*)", "Bash(su:*)"]
   },
   "hooks": {
     "Notification": [
