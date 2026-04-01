@@ -46,6 +46,20 @@ end
 
 config.color_scheme = scheme_for_appearance(get_appearance())
 
+-- Override ANSI black to be readable on dark/transparent backgrounds
+config.colors = {
+	ansi = {
+		'#686868', -- black → lighter gray
+		'#ff5c57', -- red (Snazzy default)
+		'#5af78e', -- green
+		'#f3f99d', -- yellow
+		'#57c7ff', -- blue
+		'#ff6ac1', -- magenta
+		'#9aedfe', -- cyan
+		'#f1f1f0', -- white
+	},
+}
+
 -- local theme = "Earthsong"
 -- local theme = "Snazzy"
 -- local theme = "Tokyo Night (Gogh)"
