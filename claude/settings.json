@@ -76,6 +76,7 @@
     ],
     "deny": ["Bash(rm -rf:*)", "Bash(sudo:*)", "Bash(su:*)"]
   },
+  "model": "opus[1m]",
   "hooks": {
     "Notification": [
       {
@@ -100,6 +101,10 @@
       }
     ]
   },
+  "enabledPlugins": {
+    "slack@claude-plugins-official": false,
+    "pyright-lsp@claude-plugins-official": true
+  },
   "alwaysThinkingEnabled": true,
-  "model": "claude-opus-4-5-20251101"
+  "effortLevel": "high"
 }

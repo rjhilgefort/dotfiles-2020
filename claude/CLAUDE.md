@@ -18,6 +18,15 @@
 
 - Whenever I ask you to notify me about things, or let me know about progress, always use this script like this `terminal-notifier -title "Claude Code" -message "message goes here"`. By default I would like you to ping me when you have prompted me for more input after I have asked you to do something.
 
+## Jira
+
+- Use curl with the Jira REST API directly (MCP server unreliable)
+- Credentials stored in `~/.zsh_secrets` as `JIRA_EMAIL` and `JIRA_API_TOKEN`
+- Auth: `--user "$JIRA_EMAIL:$JIRA_API_TOKEN"`
+- Base URL: `https://splunk.atlassian.net`
+- Get issue: `curl -s --user "$JIRA_EMAIL:$JIRA_API_TOKEN" "https://splunk.atlassian.net/rest/api/3/issue/ISSUE-KEY"`
+- Add comment: `curl -s -X POST --user "$JIRA_EMAIL:$JIRA_API_TOKEN" -H "Content-Type: application/json" "https://splunk.atlassian.net/rest/api/3/issue/ISSUE-KEY/comment" -d '{"body": {"type": "doc", "version": 1, "content": [{"type": "paragraph", "content": [{"type": "text", "text": "Comment text"}]}]}}'`
+
 ## TypeScript Guidelines
 
 When writing typescript code, adhere to the following guidelines.
