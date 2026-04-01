@@ -40,6 +40,9 @@ alias timezone-eastern="timedatectl set-timezone America/Kentucky/Louisville"
 alias network-restart="sudo systemctl restart NetworkManager"
 alias keyboard-key-repeat="xset r rate 150 50"
 
+# Fix dictation / speech-to-text
+alias fix-dictation="killall corespeechd"
+
 # Do this if you install a new nvidia driver?
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 

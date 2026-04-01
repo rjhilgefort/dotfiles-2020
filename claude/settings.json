@@ -49,7 +49,6 @@
       "Bash(git rev-parse:*)",
       "Bash(git config --get:*)",
       "Bash(git add)",
-      "Bash(git push)",
       "Bash(git pull)",
       "Bash(npm:*)",
       "Bash(yarn:*)",
@@ -75,11 +74,7 @@
       "Bash(man:*)",
       "Bash(tldr:*)"
     ],
-    "deny": [
-      "Bash(rm -rf:*)",
-      "Bash(sudo:*)",
-      "Bash(su:*)"
-    ]
+    "deny": ["Bash(rm -rf:*)", "Bash(sudo:*)", "Bash(su:*)"]
   },
   "hooks": {
     "Notification": [
