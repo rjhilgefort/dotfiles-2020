@@ -18,22 +18,22 @@ alt - d : yabai -m space --layout bsp
 alt - h : if [ "$(yabai -m query --spaces --space | jq -re '.type')" = "bsp" ]; then \
             yabai -m window --focus west || yabai -m display --focus west; \
           else \
-            yabai -m window --focus stack.prev || yabai -m window --focus stack.last; \
+            yabai -m window --focus stack.prev || yabai -m display --focus west || yabai -m window --focus stack.last; \
           fi
 alt - j : if [ "$(yabai -m query --spaces --space | jq -re '.type')" = "bsp" ]; then \
             yabai -m window --focus south || yabai -m display --focus south; \
           else \
-            yabai -m window --focus stack.prev || yabai -m window --focus stack.last; \
+            yabai -m window --focus stack.prev || yabai -m display --focus south || yabai -m window --focus stack.last; \
           fi
 alt - k : if [ "$(yabai -m query --spaces --space | jq -re '.type')" = "bsp" ]; then \
             yabai -m window --focus north || yabai -m display --focus north; \
           else \
-            yabai -m window --focus stack.next || yabai -m window --focus stack.first; \
+            yabai -m window --focus stack.next || yabai -m display --focus north || yabai -m window --focus stack.first; \
           fi
 alt - l : if [ "$(yabai -m query --spaces --space | jq -re '.type')" = "bsp" ]; then \
             yabai -m window --focus east || yabai -m display --focus east; \
           else \
-            yabai -m window --focus stack.next || yabai -m window --focus stack.first; \
+            yabai -m window --focus stack.next || yabai -m display --focus east || yabai -m window --focus stack.first; \
           fi
 
 # move focused window
