@@ -105,6 +105,15 @@ shift + alt + ctrl - f : yabai -m window --toggle sticky;\
 
 shift + alt + ctrl - b : pkill borders; borders active_color=0xFF4CBB67 inactive_color=0xff494d64 width=9.0 &
 
+# Multi-display: toggle workspace sync (hyper + s)
+shift + alt + ctrl - s : if yabai -m signal --list | grep -q sync_spaces; then \
+                           yabai -m signal --remove sync_spaces; \
+                           terminal-notifier -title "Yabai" -message "Workspace sync OFF"; \
+                         else \
+                           yabai -m signal --add event=space_changed action="~/.config/yabai/sync_spaces.sh" label=sync_spaces; \
+                           terminal-notifier -title "Yabai" -message "Workspace sync ON"; \
+                         fi
+
 # Multi-display: move window to other display + follow (hyper + m)
 shift + alt + ctrl - m : (yabai -m window --display next && yabai -m display --focus next) || (yabai -m window --display prev && yabai -m display --focus prev)
 
