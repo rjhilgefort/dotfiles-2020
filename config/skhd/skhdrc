@@ -94,7 +94,7 @@ alt - m : yabai -m display --focus next || yabai -m display --focus prev
 shift + alt + ctrl - s : ~/.config/yabai/toggle_sync.sh
 
 # Multi-display: move window to other display + follow (hyper + m)
-shift + alt + ctrl - m : (yabai -m window --display next && yabai -m display --focus next) || (yabai -m window --display prev && yabai -m display --focus prev)
+shift + alt + ctrl - m : ~/.config/yabai/move_to_display.sh
 
 # Multi-display: move window to display + follow (hyper + n/p)
 shift + alt + ctrl - n : yabai -m window --display next; yabai -m display --focus next
