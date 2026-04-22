@@ -97,9 +97,8 @@ shift + alt + ctrl - f : yabai -m window --toggle sticky;\
 
 shift + alt + ctrl - b : pkill borders; borders active_color=0xFF4CBB67 inactive_color=0xff494d64 width=9.0 &
 
-# Multi-display: focus display (hyper + arrows)
-shift + alt + ctrl - right : yabai -m display --focus east
-shift + alt + ctrl - left : yabai -m display --focus west
+# Multi-display: focus other display (hyper + m)
+shift + alt + ctrl - m : yabai -m display --focus next || yabai -m display --focus prev
 
 # Multi-display: move window to display + follow (hyper + n/p)
 shift + alt + ctrl - n : yabai -m window --display next; yabai -m display --focus next
