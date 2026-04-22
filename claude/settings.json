@@ -74,11 +74,7 @@
       "Bash(man:*)",
       "Bash(tldr:*)"
     ],
-    "deny": [
-      "Bash(rm -rf:*)",
-      "Bash(sudo:*)",
-      "Bash(su:*)"
-    ]
+    "deny": ["Bash(rm -rf:*)", "Bash(sudo:*)", "Bash(su:*)"]
   },
   "model": "opus[1m]",
   "hooks": {
@@ -105,5 +101,10 @@
       }
     ]
   },
-  "alwaysThinkingEnabled": true
+  "enabledPlugins": {
+    "slack@claude-plugins-official": false,
+    "pyright-lsp@claude-plugins-official": true
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high"
 }
