@@ -1,17 +1,20 @@
 #!/bin/bash
-# Toggle padding/gap on current space, then sync other displays to match
+# Toggle padding/gap on current space, then sync all other visible spaces to match
 
 yabai -m space --toggle padding
 yabai -m space --toggle gap
 
-CUR_PAD=$(yabai -m query --spaces --space | jq '."top-padding"')
-CUR_DIS=$(yabai -m query --displays --display | jq '.index')
+DISPLAY_COUNT=$(yabai -m query --displays | jq 'length')
+[ "$DISPLAY_COUNT" -le 1 ] && exit 0
 
-for did in $(yabai -m query --displays | jq -r '.[].index'); do
-    [ "$did" = "$CUR_DIS" ] && continue
-    SID=$(yabai -m query --spaces --display "$did" | jq -r '.[] | select(."is-visible") | .index')
-    [ -z "$SID" ] && continue
-    OPAD=$(yabai -m query --spaces --space "$SID" | jq '."top-padding"')
+CUR_PAD=$(yabai -m query --spaces --space | jq '."top-padding"')
+CUR_SPACE=$(yabai -m query --spaces --space | jq '.index')
+
+# Find all visible spaces and sync padding to match current
+for info in $(yabai -m query --spaces | jq -r '.[] | select(."is-visible" == true) | "\(.index):\(."top-padding")"'); do
+    SID="${info%%:*}"
+    OPAD="${info##*:}"
+    [ "$SID" = "$CUR_SPACE" ] && continue
     if [ "$CUR_PAD" != "$OPAD" ]; then
         yabai -m space "$SID" --toggle padding
         yabai -m space "$SID" --toggle gap
