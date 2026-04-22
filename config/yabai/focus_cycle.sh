@@ -2,41 +2,48 @@
 # Usage: focus_cycle.sh <h|j|k|l>
 # Unified stack cycling across displays.
 # BSP: directional focus with display fallback.
-# Stack: h/j=prev, k/l=next — cross-display at stack edges,
-#        landing at the correct end of the other display's stack.
+# Stack: h/j=prev, k/l=next.
+# After crossing displays, lands at the correct end of the target's stack.
 
 VIMDIR=$1
 LAYOUT=$(yabai -m query --spaces --space | jq -re '.type')
 DISPLAY_COUNT=$(yabai -m query --displays | jq 'length')
 
+# Try to navigate within current space
+MOVED=false
 if [ "$LAYOUT" = "bsp" ]; then
     case $VIMDIR in
-        h) yabai -m window --focus west || yabai -m display --focus west ;;
-        j) yabai -m window --focus south || yabai -m display --focus south ;;
-        k) yabai -m window --focus north || yabai -m display --focus north ;;
-        l) yabai -m window --focus east || yabai -m display --focus east ;;
+        h) yabai -m window --focus west 2>/dev/null && MOVED=true ;;
+        j) yabai -m window --focus south 2>/dev/null && MOVED=true ;;
+        k) yabai -m window --focus north 2>/dev/null && MOVED=true ;;
+        l) yabai -m window --focus east 2>/dev/null && MOVED=true ;;
     esac
-    exit 0
-fi
-
-# Stack mode: h/j=prev, k/l=next
-case $VIMDIR in
-    h|j) STACK_DIR="prev"; STACK_WRAP="last"; ARRIVE_AT="last" ;;
-    k|l) STACK_DIR="next"; STACK_WRAP="first"; ARRIVE_AT="first" ;;
-esac
-
-# Try moving within the current stack
-if yabai -m window --focus "stack.$STACK_DIR" 2>/dev/null; then
-    exit 0
-fi
-
-# At edge of stack — cross to other display or wrap
-if [ "$DISPLAY_COUNT" -gt 1 ]; then
-    if yabai -m display --focus next 2>/dev/null || yabai -m display --focus prev 2>/dev/null; then
-        # Land at the correct end of the other display's stack
-        yabai -m window --focus "stack.$ARRIVE_AT" 2>/dev/null
-    fi
 else
-    # Single display — wrap around
-    yabai -m window --focus "stack.$STACK_WRAP"
+    case $VIMDIR in
+        h|j) yabai -m window --focus stack.prev 2>/dev/null && MOVED=true ;;
+        k|l) yabai -m window --focus stack.next 2>/dev/null && MOVED=true ;;
+    esac
+fi
+
+$MOVED && exit 0
+
+# Couldn't move within current space — try crossing displays
+if [ "$DISPLAY_COUNT" -gt 1 ]; then
+    case $VIMDIR in
+        h) yabai -m display --focus west 2>/dev/null || yabai -m display --focus prev 2>/dev/null || yabai -m display --focus next 2>/dev/null ;;
+        j) yabai -m display --focus south 2>/dev/null || yabai -m display --focus prev 2>/dev/null || yabai -m display --focus next 2>/dev/null ;;
+        k) yabai -m display --focus north 2>/dev/null || yabai -m display --focus next 2>/dev/null || yabai -m display --focus prev 2>/dev/null ;;
+        l) yabai -m display --focus east 2>/dev/null || yabai -m display --focus next 2>/dev/null || yabai -m display --focus prev 2>/dev/null ;;
+    esac
+    # Land at the correct end of the target's stack
+    case $VIMDIR in
+        h|j) yabai -m window --focus stack.last 2>/dev/null ;;
+        k|l) yabai -m window --focus stack.first 2>/dev/null ;;
+    esac
+else
+    # Single display — wrap stack
+    case $VIMDIR in
+        h|j) yabai -m window --focus stack.last 2>/dev/null ;;
+        k|l) yabai -m window --focus stack.first 2>/dev/null ;;
+    esac
 fi

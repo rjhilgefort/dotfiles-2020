@@ -9,7 +9,7 @@ CUR_DIS=$(yabai -m query --displays --display | jq '.index')
 
 for did in $(yabai -m query --displays | jq -r '.[].index'); do
     [ "$did" = "$CUR_DIS" ] && continue
-    SID=$(yabai -m query --spaces --display "$did" | jq -r '.[] | select(."has-focus") | .index')
+    SID=$(yabai -m query --spaces --display "$did" | jq -r '.[] | select(."is-visible") | .index')
     [ -z "$SID" ] && continue
     OPAD=$(yabai -m query --spaces --space "$SID" | jq '."top-padding"')
     if [ "$CUR_PAD" != "$OPAD" ]; then
