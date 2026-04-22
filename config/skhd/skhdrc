@@ -3,7 +3,7 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle zoom-parent
 
 # Change tiling padding or positions
-alt - a : $HOME/.config/yabai/toggle_padding.sh
+alt - a : /Users/robbot/.config/yabai/toggle_padding.sh
 alt - z : yabai -m space --rotate 90
 alt - x : yabai -m space --mirror y-axis
 alt - c : yabai -m space --rotate 90; yabai -m space --rotate 90;
@@ -15,10 +15,10 @@ alt - d : yabai -m space --layout bsp
 
 # change focus (bsp or stack, with stack wrapping)
 # bsp: focus window in direction, fall back to display if at edge
-alt - h : $HOME/.config/yabai/focus_cycle.sh h
-alt - j : $HOME/.config/yabai/focus_cycle.sh j
-alt - k : $HOME/.config/yabai/focus_cycle.sh k
-alt - l : $HOME/.config/yabai/focus_cycle.sh l
+alt - h : /Users/robbot/.config/yabai/focus_cycle.sh h
+alt - j : /Users/robbot/.config/yabai/focus_cycle.sh j
+alt - k : /Users/robbot/.config/yabai/focus_cycle.sh k
+alt - l : /Users/robbot/.config/yabai/focus_cycle.sh l
 
 # move focused window
 shift + alt - h : yabai -m window --warp west
@@ -97,7 +97,7 @@ shift + alt + ctrl - s : if yabai -m signal --list | grep -q sync_spaces; then \
                            yabai -m signal --remove sync_spaces; \
                            terminal-notifier -title "Yabai" -message "Workspace sync OFF"; \
                          else \
-                           yabai -m signal --add event=space_changed action="~/.config/yabai/sync_spaces.sh" label=sync_spaces; \
+                           yabai -m signal --add event=space_changed action="/Users/robbot/.config/yabai/sync_spaces.sh" label=sync_spaces; \
                            terminal-notifier -title "Yabai" -message "Workspace sync ON"; \
                          fi
 
